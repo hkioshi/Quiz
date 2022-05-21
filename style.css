@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+}
+
+#titulo
+{
+    border: 1px solid black;
+    text-align: center;
+    width: 20%;
+    position: relative;
+    left: 40%;
+    margin-top: 5%;
+    font-size: 3vw;
+    
+}

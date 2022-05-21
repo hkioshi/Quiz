@@ -43,3 +43,9 @@ body
     
    font-size: 2vw;
 }
+
+#tituloQuestaoUm
+{
+    display: flex;
+    align-items: center;
+}

@@ -21,7 +21,7 @@ function jogar()
     const numeroDaQuestaoUm = document.createElement("div");
 
     //o Que deve estar escrito
-    h1TituloQuestaoUm.innerText = 'Teste';
+    h1TituloQuestaoUm.innerText = 'Quantos palitos tem aqui?';
     numeroDaQuestaoUm.innerText = '1';
 
     // Definindo Ids
@@ -32,16 +32,25 @@ function jogar()
     document.body.appendChild(divQuestaoUm);
     divQuestaoUm.appendChild(divTituloQuestaoUm);
     divQuestaoUm.appendChild(numeroDaQuestaoUm);
-    divTituloQuestaoUm.appendChild(h1TituloQuestaoUm);
+    divTituloQuestaoUm.appendChild(h1TituloQuestaoUm); 
     
 
     
     //style da questão(to tentando i-i)
-    
+    divQuestaoUm.style.display = "flex";
+    divQuestaoUm.style.flexDirection = "row";
+
     divTituloQuestaoUm.style.position = "relative";
     divTituloQuestaoUm.style.left = "46%";
     divTituloQuestaoUm.style.width = "fit-content";
     numeroDaQuestaoUm.style.width = "fit-content";
+    numeroDaQuestaoUm.style.border = "1px solid black";
+    numeroDaQuestaoUm.style.height = "fit-content";
+    numeroDaQuestaoUm.style.display = "flex";
+    numeroDaQuestaoUm.style.padding = "2%";
+    numeroDaQuestaoUm.style.marginTop = " 2%";
+    numeroDaQuestaoUm.style.borderRadius = "50%"
+    
     
       
       

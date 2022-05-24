@@ -10,16 +10,7 @@ function jogar()
       }
     document.body.removeChild(tagTitulo)
 
-    //Elementos da questão 1
-    const divQuestaoUm = document.createElement("div");
-    const divTituloQuestaoUm = document.createElement("div");
-    const h1TituloQuestaoUm = document.createElement('h1');
-    const divAlternativaUm = document.createElement("div");
-    const divAlternativaDois = document.createElement("div");
-    const divAlternativaTres = document.createElement("div");
-    const divAlternativaquatro = document.createElement("div");
-    const numeroDaQuestaoUm = document.createElement("div");
-
+    
     //o Que deve estar escrito
     h1TituloQuestaoUm.innerText = 'Quantos palitos tem aqui?';
     numeroDaQuestaoUm.innerText = '1';
@@ -30,26 +21,14 @@ function jogar()
 
     //colocando elementos na pagina
     document.body.appendChild(divQuestaoUm);
-    divQuestaoUm.appendChild(divTituloQuestaoUm);
     divQuestaoUm.appendChild(numeroDaQuestaoUm);
+    divQuestaoUm.appendChild(divTituloQuestaoUm);
     divTituloQuestaoUm.appendChild(h1TituloQuestaoUm); 
     
 
     
-    //style da questão(to tentando i-i)
-    divQuestaoUm.style.display = "flex";
-    divQuestaoUm.style.flexDirection = "row";
+    //style da questão(to conseguindo, eu acho :D)
 
-    divTituloQuestaoUm.style.position = "relative";
-    divTituloQuestaoUm.style.left = "46%";
-    divTituloQuestaoUm.style.width = "fit-content";
-    numeroDaQuestaoUm.style.width = "fit-content";
-    numeroDaQuestaoUm.style.border = "1px solid black";
-    numeroDaQuestaoUm.style.height = "fit-content";
-    numeroDaQuestaoUm.style.display = "flex";
-    numeroDaQuestaoUm.style.padding = "2%";
-    numeroDaQuestaoUm.style.marginTop = " 2%";
-    numeroDaQuestaoUm.style.borderRadius = "50%"
     
     
       

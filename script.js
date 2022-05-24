@@ -13,10 +13,17 @@ function jogar()
 function aparece()
 {
   const desaparecerTitulo = document.getElementById("telaInicial");
-    desaparecerTitulo.style.display = "block";
+  desaparecerTitulo.style.display = "block";
 }
 
-function questaoUm
+function questaoUm()
 {
-  
+  let questao = document.getElementById("questaoLayoutUm");
+  let questaoNumero = document.getElementById("numeroId");
+  let questaoTitulo = document.getElementById("tituloId")
+  questaoNumero.innerText = '1';
+  questaoTitulo.innerText = 'Quantos palitos tem aqui?';
+  //questaoNumero.onclick(questaoDois());
+
+  questao.style.display = "block";
 }

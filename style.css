@@ -50,3 +50,39 @@ body
     
    font-size: 2vw;
 }
+
+.numeroQuestao
+{   
+    margin: 3%;
+    border: 1px solid black;
+    height: 20%;
+    width: 9%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120%;
+    font-size: 7vw;
+}
+
+
+.top
+{
+    display: flex;
+}
+
+.titulo
+{
+    
+    width:80% ;
+    position: relative;
+    text-align: center;
+    line-height: 200%;
+    margin-top: 2%;
+    font-size: 5vw;
+    
+    
+}
+
+#questaoLayoutUm
+{
+    display: none;
+}

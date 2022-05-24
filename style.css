@@ -10,17 +10,25 @@ body
 
 #telaInicial
 {
+    width: 300px;
+    height: 300px;
+
+    margin-top: -150px;
+    margin-left: -150px;
+    
+    top: 50%;
+    left: 50%;
+    position: absolute;
+
     display: flex;
-    flex-direction: column;   
     align-items: center;
+    justify-content: center;
 }
 
 #titulo
 {
     text-align: center;
-    width: 20%;
    
-    margin-top: 5%;
     font-size: 3vw;
     
 }
@@ -29,7 +37,6 @@ body
 {
     border: 1px solid black;
     text-align: center;
-    width: fit-content;
     padding: 1%;
     font-size: 1.5vw;
     cursor: pointer;
@@ -42,9 +49,4 @@ body
 {
     
    font-size: 2vw;
-}
-
-#tituloQuestaoUm
-{
-    
 }

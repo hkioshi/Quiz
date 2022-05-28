@@ -91,35 +91,44 @@ body
 {
     display: flex;
     width: 60%;
+    height: fit-content;
     margin-top: 1% ;
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
-    left: 28%; 
-
+    left: 31.8%; 
+    font-size: 3vw;
 }
 
 .alternativa
 {
     
     width: 35%;
-    height: 100px;
+    height: 0;
+    padding-bottom: 10%;
     border: 4px solid black;
     border-radius: 10px;
     margin: 2px;
+    text-align: center;
+    line-height: 200%;  
+    cursor: pointer;
+     
 }
 
 #palito
 {
     background-color: black;
     border-radius:20px ;
-    height: 100px;
+    height: 0;
+    padding-bottom: 6%;
     width: 0.5%;
     position: relative;
-    left: 50%;
+    left: 52.7%;
+    
 }
 
 #questaoLayoutUm
 {
     display: none;
 }
+

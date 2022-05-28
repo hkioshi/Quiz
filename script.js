@@ -1,3 +1,4 @@
+//Esse variavel serve como contador, ele vai contar que fase voce esta
 let cont;
 
 
@@ -15,13 +16,17 @@ function jogar()
 
 function aparece()
 {
+  //aqui é um botão para fazer o titulo aparecer
   const desaparecerTitulo = document.getElementById("telaInicial");
   desaparecerTitulo.style.display = "block";
 }
 
 function questaoUm()
 {
+  // adiciona + 1 no contador de fases
   cont++;
+  
+  //encontra as divs por meio das ids
   let questao = document.getElementById("questaoLayoutUm");
   let questaoNumero = document.getElementById("numeroId");
   let questaoTitulo = document.getElementById("tituloId");
@@ -30,28 +35,34 @@ function questaoUm()
   let alternativaTres = document.getElementById("quadrado3");
   let alternativaQuatro = document.getElementById("quadrado4");
   
+  //coloca texto nas divs das alternativas
   alternativaUm.innerText = '2';
   alternativaDois.innerText = '4';
   alternativaTres.innerText = '6';
   alternativaQuatro.innerText = '3';
 
+  //titulo e nº da questao/resposta da questão
   questaoNumero.innerText = '1';
   questaoTitulo.innerText = 'Quantos palitos tem aqui?';
   //questaoNumero.onclick(questaoDois());
   
+  // faz tudo aparecer na tela
   questao.style.display = "block";
 }
 
+// se responder errado ativa essa funçao
 function perdeu()
 {
+  let questao;
+  // aqui vai verificar qual questao voce esta, por isso o uso do contador
   switch(cont)
   {
     case 1:
-      let questao = document.getElementById("questaoLayoutUm");
+      questao = document.getElementById("questaoLayoutUm");
     break;
-      
   }
-
+  //faz a questao desaparecer
+  //não ta rodando isso aq
   questao.style.display = "none";
 
  

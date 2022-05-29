@@ -28,13 +28,17 @@ function questaoUm()
   
   //encontra as divs por meio das ids
   let questao = document.getElementById("questaoLayoutUm");
-  let questaoNumero = document.getElementById("numeroId");
-  let questaoTitulo = document.getElementById("tituloId");
+  let questaoNumero = document.getElementById("numeroIdUm");
+  let questaoTitulo = document.getElementById("tituloIdUm");
   let alternativaUm = document.getElementById("quadrado1");
   let alternativaDois = document.getElementById("quadrado2");
   let alternativaTres = document.getElementById("quadrado3");
   let alternativaQuatro = document.getElementById("quadrado4");
   
+  // cria e dda id ao palito da questão 1
+  let palito1 = document.createElement("div");
+  palito1.id = 'palito'; 
+
   //coloca texto nas divs das alternativas
   alternativaUm.innerText = '2';
   alternativaDois.innerText = '4';

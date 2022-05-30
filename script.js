@@ -42,10 +42,17 @@ function questaoUm()
   alternativaTres.innerText = '6';
   alternativaQuatro.innerText = '3';
 
+  alternativaUm.onclick = perdeu;
+  alternativaDois.onclick = perdeu;
+  alternativaTres.onclick = perdeu;
+  alternativaQuatro.onclick = perdeu;
+  
+  
+
   //titulo e nº da questao/resposta da questão
   questaoNumero.innerText = '1';
   questaoTitulo.innerText = 'Quantos palitos tem aqui?';
-  
+  questaoNumero.onclick = questaoDois;
   
   // faz tudo aparecer na tela
   questao.style.display = "block";
@@ -57,8 +64,11 @@ function perdeu()
   
   // aqui vai verificar qual questao voce esta, por isso o uso do contador
   const  questao = document.getElementById("questaoLayout" + cont);
+  const  aparecerPerdeu = document.getElementById("perdeu");
   //faz a questao desaparecer
   questao.style.display = "none";
+  aparecerPerdeu.display = "block";
+  
 
  
 }
@@ -76,8 +86,13 @@ function questaoDois()
   const alternativaUm = document.getElementById("quadrado5");
   const alternativaDois = document.getElementById("quadrado6");
 
+
+
   questaoNumero.innerText = '2';
-  questaoTitulo.innerText = 'Quantos palitos tem aqui?';
+  questaoTitulo.innerText = 'Lado esquerdo ao contrario, invertido e virado 180°';
+  alternativaUm.innerText = '<--';
+  alternativaDois.innerText = '-->';
+  alternativaDois.onclick = perdeu;
 
   
   

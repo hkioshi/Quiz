@@ -35,7 +35,7 @@ body
 
 #jogar
 {
-    border: 1px solid black;
+    border: 1px double black;
     text-align: center;
     padding: 1%;
     font-size: 1.5vw;
@@ -133,17 +133,17 @@ body
     left: 18%;
 }
 
-#questaoLayoutUm
+#questaoLayout1
 {
     display: none;
 }
 
-#questaoLayoutDois
+#questaoLayout2
 {
     display: none;
 }
 
-#questaoLayoutTres
+#questaoLayout3
 {
     display: none;
 }

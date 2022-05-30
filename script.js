@@ -1,5 +1,5 @@
 //Esse variavel serve como contador, ele vai contar que fase voce esta
-let cont;
+let cont = 0 ;
 
 
 function jogar()
@@ -24,20 +24,17 @@ function aparece()
 function questaoUm()
 {
   // adiciona + 1 no contador de fases
-  cont++;
+  cont = 1;
   
   //encontra as divs por meio das ids
-  let questao = document.getElementById("questaoLayoutUm");
-  let questaoNumero = document.getElementById("numeroIdUm");
-  let questaoTitulo = document.getElementById("tituloIdUm");
-  let alternativaUm = document.getElementById("quadrado1");
-  let alternativaDois = document.getElementById("quadrado2");
-  let alternativaTres = document.getElementById("quadrado3");
-  let alternativaQuatro = document.getElementById("quadrado4");
+  const questao = document.getElementById("questaoLayout1");
+  const questaoNumero = document.getElementById("numeroIdUm");
+  const questaoTitulo = document.getElementById("tituloIdUm");
+  const alternativaUm = document.getElementById("quadrado1");
+  const alternativaDois = document.getElementById("quadrado2");
+  const alternativaTres = document.getElementById("quadrado3");
+  const alternativaQuatro = document.getElementById("quadrado4");
   
-  // cria e dda id ao palito da questão 1
-  let palito1 = document.createElement("div");
-  palito1.id = 'palito'; 
 
   //coloca texto nas divs das alternativas
   alternativaUm.innerText = '2';
@@ -48,7 +45,7 @@ function questaoUm()
   //titulo e nº da questao/resposta da questão
   questaoNumero.innerText = '1';
   questaoTitulo.innerText = 'Quantos palitos tem aqui?';
-  //questaoNumero.onclick(questaoDois());
+  
   
   // faz tudo aparecer na tela
   questao.style.display = "block";
@@ -57,19 +54,32 @@ function questaoUm()
 // se responder errado ativa essa funçao
 function perdeu()
 {
-  let questao;
+  
   // aqui vai verificar qual questao voce esta, por isso o uso do contador
-  switch(cont)
-  {
-    case 1:
-      questao = document.getElementById("questaoLayoutUm");
-    break;
-  }
+  const  questao = document.getElementById("questaoLayout" + cont);
   //faz a questao desaparecer
-  //não ta rodando isso aq
   questao.style.display = "none";
 
  
 }
 
+function questaoDois()
+{
+  cont = 2;
+  const  questaoUm = document.getElementById("questaoLayout1");
+  const  questaoDois = document.getElementById("questaoLayout2");
+  questaoUm.style.display = 'none';
+  questaoDois.style.display = 'block';
 
+  const questaoNumero = document.getElementById("numeroIdDois");
+  const questaoTitulo = document.getElementById("tituloIdDois");
+  const alternativaUm = document.getElementById("quadrado5");
+  const alternativaDois = document.getElementById("quadrado6");
+
+  questaoNumero.innerText = '2';
+  questaoTitulo.innerText = 'Quantos palitos tem aqui?';
+
+  
+  
+
+}

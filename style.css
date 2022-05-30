@@ -127,6 +127,12 @@ body
     
 }
 
+#quadrado9
+{
+    position: relative;
+    left: 18%;
+}
+
 #questaoLayoutUm
 {
     display: none;

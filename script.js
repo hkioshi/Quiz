@@ -23,7 +23,7 @@ function aparece()
 
 function questaoUm()
 {
-  // adiciona + 1 no contador de fases
+  // Indicando qual layout esta
   cont = 1;
   
   //encontra as divs por meio das ids
@@ -67,7 +67,7 @@ function perdeu()
   const  aparecerPerdeu = document.getElementById("perdeu");
   //faz a questao desaparecer
   questao.style.display = "none";
-  aparecerPerdeu.display = "block";
+  aparecerPerdeu.style.display = "block";
   
 
  
@@ -75,19 +75,22 @@ function perdeu()
 
 function questaoDois()
 {
+  // Indicando qual layout esta
   cont = 2;
+
+
   const  questaoUm = document.getElementById("questaoLayout1");
   const  questaoDois = document.getElementById("questaoLayout2");
-  questaoUm.style.display = 'none';
-  questaoDois.style.display = 'block';
-
   const questaoNumero = document.getElementById("numeroIdDois");
   const questaoTitulo = document.getElementById("tituloIdDois");
   const alternativaUm = document.getElementById("quadrado5");
   const alternativaDois = document.getElementById("quadrado6");
 
+  //Fazendo questão 1 desaparecer e questão 2 aparecer
+  questaoUm.style.display = 'none';
+  questaoDois.style.display = 'block';
 
-
+  //coloca texto nas divs das alternativas
   questaoNumero.innerText = '2';
   questaoTitulo.innerText = 'Lado esquerdo ao contrario, invertido e virado 180°';
   alternativaUm.innerText = '<--';

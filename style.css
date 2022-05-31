@@ -28,44 +28,29 @@ body
 #titulo
 {
     text-align: center;
+   
     font-size: 3vw;
     
 }
 
 #jogar
 {
-    border: 1px solid black;
+    border: 1px double black;
     text-align: center;
     padding: 1%;
     font-size: 1.5vw;
     cursor: pointer;
-    border-radius: 10px;    
+    transition: all 0.5s;
+    border-radius: 10px;
+    
 }
 
-.jogarAnimacao
-{    
-    transform: rotate(360deg);
-    transition: all 2.5s;
-   font-size: 2vw;
-   transition-delay: 0.2s;
-}
-#segredo{
-    margin-top: 100px;
-    border: 1px solid black;
-    text-align: center;
-    padding: 1%;
-    font-size: 1.5vw;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.segredoAnimação
+#jogar:hover
 {
-    font-size: 2vw;
-    margin-top: 100px;
-    transform: rotate(360deg);
-    transition: all 2.5s;
-    transition-delay: 0.2s;
+    
+   font-size: 2vw;
 }
+
 .numeroQuestao
 {   
     margin: 3%;
@@ -77,14 +62,11 @@ body
     line-height: 120%;
     font-size: 7vw;
     text-decoration: none;
-    transition: 1s;
-    
 }
  
 .numeroQuestao:hover
 {
     cursor: pointer;
-    background-color: blue;
 }
 
 
@@ -130,10 +112,7 @@ body
     text-align: center;
     line-height: 200%;  
     cursor: pointer;
-    transition:1s
-}
-.alternativa:hover{
-    background-color: orange;
+     
 }
 
 #palito
@@ -154,17 +133,17 @@ body
     left: 18%;
 }
 
-#questaoLayoutUm
+#questaoLayout1
 {
     display: none;
 }
 
-#questaoLayoutDois
+#questaoLayout2
 {
     display: none;
 }
 
-#questaoLayoutTres
+#questaoLayout3
 {
     display: none;
 }
@@ -173,8 +152,6 @@ body
 {
     display: none;
 }
-
-
 
 
 

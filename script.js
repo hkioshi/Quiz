@@ -98,11 +98,3 @@ function questaoDois()
   
 
 }
-function animarBotaoJogar() {
-  const jogar = document.getElementById('jogar');
-  jogar.className = 'jogarAnimacao';
-}
-function animarBotaoSegredo() {
-  const jogar = document.getElementById('segredo');
-  jogar.className = 'segredoAnimação';
-}

@@ -10,7 +10,9 @@
     <body>
         <div id="telaInicial" style="display:block ;">
             <div id="titulo"><h1>Quiz</h1></div>
-            <div id="jogar" onclick="jogar()">Jogar</div>
+            <div id="jogar" onmouseenter="animarBotaoJogar()" onclick="jogar()">Jogar</div>
+             <!--  coloca função segredo, so coloquei pra marcar o layout-->
+             <div id="segredo" onmouseenter="animarBotaoSegredo()" onclick="segredo()">segredo</div>
         </div>
         <button onclick="aparece()" id="botaoAparece" style="display: none;">aparece</button>
         
@@ -56,8 +58,8 @@
         </div>
 
         <div id="perdeu">
-            <div>Errou</div>
-            <a href="index.html"><div onclick="perdeu()">recomeçar</div></a>
+            <div class="tituloPerdeu">Errou</div>
+            <a href="index.html"><div onclick="perdeu()" class="recomeçar">recomeçar</div></a>
         </div>
         
 

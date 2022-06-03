@@ -51,6 +51,7 @@ function questaoUm()
 
   //titulo e nº da questao/resposta da questão
   questaoNumero.innerText = '1';
+  questaoNumero.style.cursor = 'pointer';
   questaoTitulo.innerText = 'Quantos palitos tem aqui?';
   questaoNumero.onclick = questaoDois;
   

@@ -130,6 +130,7 @@ cont = 1;
   questaoDois.style.display = 'none';
   questaoTres.style.display = 'block';
   palitoId.style.display = 'none';
+  questaoNumero.onclick = '';
 
   questaoNumero.innerText = '3';
   questaoTitulo.innerText = 'x 9 + 20?';
@@ -160,14 +161,19 @@ cont = 1;
   const alternativaQuatro = document.getElementById("quadrado4");
   const palitoId = document.getElementById("palito");
   palitoId.style.display = 'none';
-
+  questaoNumero.onclick = '';
+  questaoNumero.style.cursor = 'defalt';
   questaoNumero.innerText = '3';
   questaoTitulo.innerText = 'x 9 + 20?';
 
-  alternativaUm.innerText = '46';
-  alternativaDois.innerText = '87';
-  alternativaTres.innerText = '27';
-  alternativaQuatro.innerText = '29';
+  const planetaDiv = document.createElement("div");
+  planetaDiv.id = 'planetaImg';
+  
+
+  alternativaUm.innerText = 'jupter';
+  alternativaDois.innerText = 'Saturno';
+  alternativaTres.innerText = 'Mercurio';
+  alternativaQuatro.innerText = 'Marte';
 
   alternativaUm.onclick = questaoQuatro;
   alternativaDois.onclick = perdeu;

@@ -210,7 +210,7 @@ body
 
 }
 
-.recomeçar
+#recomecar
 {
     border: 6px solid rgba(0, 255, 221, 0.493);
     width: 15%;
@@ -221,6 +221,6 @@ body
     text-decoration: none;
     color: black;
     border-radius: 10px;
-
+    cursor: pointer;
 }
 

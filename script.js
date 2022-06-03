@@ -1,5 +1,6 @@
 //Esse variavel serve como contador, ele vai contar que fase voce esta
 let cont = 0 ;
+let contadorDeErrou = 0;
 
 
 function jogar()
@@ -11,6 +12,7 @@ function jogar()
   const desaparecerTitulo = document.getElementById("telaInicial");
   desaparecerTitulo.style.display = "none";
   questaoUm();
+  //final();
 
 }
 
@@ -66,12 +68,21 @@ function perdeu()
   // aqui vai verificar qual questao voce esta, por isso o uso do contador
   const  questao = document.getElementById("questaoLayout" + cont);
   const  aparecerPerdeu = document.getElementById("perdeu");
+  const recomecar = document.getElementById("recomecar")
   //faz a questao desaparecer
   questao.style.display = "none";
   aparecerPerdeu.style.display = "block";
-  
 
- 
+}
+
+function recomecar()
+{
+  cont = 0;
+  const  desaparecerPerdeu = document.getElementById("perdeu");
+  const desaparecerTitulo = document.getElementById("telaInicial");
+  desaparecerPerdeu.style.display = "none";
+  desaparecerTitulo.style.display = "block";
+  contadorDeErrou++;
 }
 
 function questaoDois()
@@ -93,7 +104,7 @@ function questaoDois()
 
   //coloca texto nas divs das alternativas
   questaoNumero.innerText = '2';
-  questaoTitulo.innerText = 'Lado esquerdo ao contrario, invertido e virado 180°';
+  questaoTitulo.innerText = 'Lado direito ao contrario, invertido e virado 180°';
   alternativaUm.innerText = '<--';
   alternativaDois.innerText = '-->';
   alternativaDois.onclick = perdeu;
@@ -102,11 +113,25 @@ function questaoDois()
   
 
 }
-function animarBotaoJogar() {
+
+function animarBotaoJogar() 
+{
   const jogar = document.getElementById('jogar');
   jogar.className = 'jogarAnimacao';
 }
-function animarBotaoSegredo() {
+
+function animarBotaoSegredo() 
+{
   const jogar = document.getElementById('segredo');
   jogar.className = 'segredoAnimação';
+}
+
+function final()
+{
+  const finalDiv = document.getElementById('fim');
+  const vezesPerdeu = document.getElementById('perdeuQuantas');
+  finalDiv.style.display = 'block';
+  vezesPerdeu.innerText = ('voce perdeu ' + contadorDeErrou + ' vezes');
+
+
 }

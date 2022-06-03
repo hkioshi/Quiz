@@ -147,6 +147,37 @@ cont = 1;
 
 }
 
+function questaoQuatro()
+{
+cont = 1;
+
+  const questaoTres = document.getElementById("questaoLayout1");
+  const questaoNumero = document.getElementById("numeroIdUm");
+  const questaoTitulo = document.getElementById("tituloIdUm");
+  const alternativaUm = document.getElementById("quadrado1");
+  const alternativaDois = document.getElementById("quadrado2");
+  const alternativaTres = document.getElementById("quadrado3");
+  const alternativaQuatro = document.getElementById("quadrado4");
+  const palitoId = document.getElementById("palito");
+  palitoId.style.display = 'none';
+
+  questaoNumero.innerText = '3';
+  questaoTitulo.innerText = 'x 9 + 20?';
+
+  alternativaUm.innerText = '46';
+  alternativaDois.innerText = '87';
+  alternativaTres.innerText = '27';
+  alternativaQuatro.innerText = '29';
+
+  alternativaUm.onclick = questaoQuatro;
+  alternativaDois.onclick = perdeu;
+  alternativaTres.onclick = perdeu;
+  alternativaQuatro.onclick = perdeu;
+  
+
+}
+
+
 function animarBotaoJogar() 
 {
   const jogar = document.getElementById('jogar');

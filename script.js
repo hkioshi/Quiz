@@ -108,8 +108,41 @@ function questaoDois()
   alternativaUm.innerText = '<--';
   alternativaDois.innerText = '-->';
   alternativaDois.onclick = perdeu;
-
+  alternativaUm.onclick = questaoTres;
   
+  
+
+}
+
+function questaoTres()
+{
+cont = 1;
+
+  const questaoDois = document.getElementById("questaoLayout2");
+  const questaoTres = document.getElementById("questaoLayout1");
+  const questaoNumero = document.getElementById("numeroIdUm");
+  const questaoTitulo = document.getElementById("tituloIdUm");
+  const alternativaUm = document.getElementById("quadrado1");
+  const alternativaDois = document.getElementById("quadrado2");
+  const alternativaTres = document.getElementById("quadrado3");
+  const alternativaQuatro = document.getElementById("quadrado4");
+  const palitoId = document.getElementById("palito");
+  questaoDois.style.display = 'none';
+  questaoTres.style.display = 'block';
+  palitoId.style.display = 'none';
+
+  questaoNumero.innerText = '3';
+  questaoTitulo.innerText = 'x 9 + 20?';
+
+  alternativaUm.innerText = '47';
+  alternativaDois.innerText = '87';
+  alternativaTres.innerText = '27';
+  alternativaQuatro.innerText = '29';
+
+  alternativaUm.onclick = questaoQuatro;
+  alternativaDois.onclick = perdeu;
+  alternativaTres.onclick = perdeu;
+  alternativaQuatro.onclick = perdeu;
   
 
 }
@@ -133,5 +166,6 @@ function final()
   finalDiv.style.display = 'block';
   vezesPerdeu.innerText = ('voce perdeu ' + contadorDeErrou + ' vezes');
 
+  
 
 }

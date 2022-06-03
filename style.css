@@ -11,6 +11,7 @@ body
     background-image:url("imagens/IMG-20220602-WA0010.jpg");
     
     background-size: 100%;
+    user-select: none;
 }
 
 #telaInicial
@@ -223,4 +224,5 @@ body
     border-radius: 10px;
     cursor: pointer;
 }
+
 

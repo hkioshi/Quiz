@@ -12,6 +12,7 @@ body
     
     background-size: 100%;
     user-select: none;
+    background-repeat: no-repeat;
 }
 
 #telaInicial
@@ -149,19 +150,20 @@ body
     line-height: 200%;  
     cursor: pointer;
     font-family: sans-serif;
-     
+
 }
 
 #palito
 {
-    background-color: black;
+    background-color:black;
     border-radius:20px ;
     height: 0;
     padding-bottom: 6%;
     width: 0.5%;
     position: relative;
     left: 52.7%;
-    
+    margin-top :-5%;
+    background-repeat: no-repeat;
 }
 
 #quadrado9
@@ -231,4 +233,9 @@ body
     width: 100px;
     height: 100px;
     background-image: url('imagens/jupter.png');
+}
+
+#botaoCertoId
+{
+    background-color: black;
 }

@@ -73,6 +73,25 @@ function perdeu()
   questao.style.display = "none";
   aparecerPerdeu.style.display = "block";
 
+  const palitoId = document.getElementById("palito");
+
+  palitoId.style.width = '0.5%';
+  palitoId.style.height = '0';
+  palitoId.style.display = 'block';
+  palitoId.style.backgroundColor = 'black';
+  palitoId.style.backgroundImage = ''; 
+  palitoId.style.left = '52,7%%';
+
+
+  /* background-color:black;
+    border-radius:20px ;
+    height: 0;
+    padding-bottom: 6%;
+    width: 0.5%;
+    position: relative;
+    left: 52.7%;
+    margin-top :-5%;
+    background-repeat: no-repeat;*/
 }
 
 function recomecar()
@@ -104,11 +123,14 @@ function questaoDois()
 
   //coloca texto nas divs das alternativas
   questaoNumero.innerText = '2';
-  questaoTitulo.innerText = 'Lado direito ao contrario, invertido e virado 180°';
+  questaoTitulo.innerText = 'Lado direito ao contrario, invertido e virao 180°';
   alternativaUm.innerText = '<--';
   alternativaDois.innerText = '-->';
   alternativaDois.onclick = perdeu;
   alternativaUm.onclick = questaoTres;
+
+  alternativaUm.style.display = 'block';
+  alternativaDois.style.display = 'block';
   
   
 
@@ -160,25 +182,60 @@ cont = 1;
   const alternativaTres = document.getElementById("quadrado3");
   const alternativaQuatro = document.getElementById("quadrado4");
   const palitoId = document.getElementById("palito");
-  palitoId.style.display = 'none';
-  questaoNumero.onclick = '';
-  questaoNumero.style.cursor = 'defalt';
-  questaoNumero.innerText = '3';
-  questaoTitulo.innerText = 'x 9 + 20?';
 
-  const planetaDiv = document.createElement("div");
-  planetaDiv.id = 'planetaImg';
+  palitoId.style.width = '10%';
+  palitoId.style.height = '10%';
+  palitoId.style.display = 'block';
+  palitoId.style.backgroundColor = 'rgb(223, 254, 241)';
+  palitoId.style.backgroundImage = 'url(imagens/jupter.png)'; 
+  palitoId.style.backgroundSize = '60%';
+  
+  palitoId.style.backgroundRepeat = 'noRepeat';
+  palitoId.style.left = '52.7%';
   
 
-  alternativaUm.innerText = 'jupter';
+  questaoNumero.onclick = '';
+  questaoNumero.style.cursor = 'defalt';
+  questaoNumero.innerText = '4';
+  questaoTitulo.innerText = 'Que planeta é esse?';
+
+
+  alternativaUm.innerText = 'júpiter';
   alternativaDois.innerText = 'Saturno';
-  alternativaTres.innerText = 'Mercurio';
+  alternativaTres.innerText = 'Mercúrio';
   alternativaQuatro.innerText = 'Marte';
 
-  alternativaUm.onclick = questaoQuatro;
+  alternativaUm.onclick = questaoCinco;
   alternativaDois.onclick = perdeu;
   alternativaTres.onclick = perdeu;
   alternativaQuatro.onclick = perdeu;
+  
+
+}
+
+function questaoCinco()
+{
+  cont = 2;
+  const questao4 = document.getElementById("questaoLayout1");
+  const questao5 = document.getElementById("questaoLayout2");
+  const alternativaUm = document.getElementById("quadrado5");
+  const alternativaDois = document.getElementById("quadrado6");
+  const questaoNumero = document.getElementById("numeroIdDois");
+  const questaoTitulo = document.getElementById("tituloIdDois");
+
+  const botaoCerto = document.createElement('div');
+  botaoCerto.id = 'botaoCertoId';
+  document.body.appendChild(botaoCerto)
+  const botaoErrado =  
+
+  questao4.style.display = 'none';
+  questao5.style.display = 'block';
+
+  alternativaUm.style.display = 'none';
+  alternativaDois.style.display = 'none';
+
+  questaoNumero.innerText = '5';
+  questaoTitulo.innerText = 'Encontre o botao escondido';
   
 
 }

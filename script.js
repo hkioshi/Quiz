@@ -124,8 +124,8 @@ function questaoDois()
   //coloca texto nas divs das alternativas
   questaoNumero.innerText = '2';
   questaoTitulo.innerText = 'Lado direito ao contrario, invertido e virao 180°';
-  alternativaUm.innerText = '<--';
-  alternativaDois.innerText = '-->';
+  alternativaUm.innerText = '<--|';
+  alternativaDois.innerText = '|-->';
   alternativaDois.onclick = perdeu;
   alternativaUm.onclick = questaoTres;
 
@@ -234,7 +234,7 @@ function questaoCinco()
   const botaosim = document.getElementById("botaoCertoId");
   botaonao.innerText = 'esse é o errado';
   botaonao.onclick = perdeu;
-  botaonao.onclick = questaoSeis;
+  botaosim.onclick = questaoSeis;
 
 
   questao4.style.display = 'none';
@@ -249,6 +249,57 @@ function questaoCinco()
 
 }
 
+function questaoSeis()
+{
+  
+
+
+  // Indicando qual layout esta
+  cont = 1;
+  
+  //encontra as divs por meio das ids
+  const questao6 = document.getElementById("questaoLayout1");
+  const questao5 = document.getElementById("questaoLayout2");
+  const botaonao = document.getElementById("botaoErradoId");
+  const botaosim = document.getElementById("botaoCertoId");
+  const questaoNumero = document.getElementById("numeroIdUm");
+  const questaoTitulo = document.getElementById("tituloIdUm");
+  const alternativaUm = document.getElementById("quadrado1");
+  const alternativaDois = document.getElementById("quadrado2");
+  const alternativaTres = document.getElementById("quadrado3");
+  const alternativaQuatro = document.getElementById("quadrado4");
+  const palitoId = document.getElementById("palito");
+
+  //apagando a questao anterior
+
+  questao5.style.display = 'none';
+  document.body.removeChild(botaonao);
+  document.body.removeChild(botaosim);
+  palitoId.style.display = 'none';
+
+
+  //coloca texto nas divs das alternativas
+  alternativaUm.innerText = '<<';
+  alternativaDois.innerText = '<--|';
+  alternativaTres.innerText = '<-|';
+  alternativaQuatro.innerText = '<=';
+
+  alternativaUm.onclick = perdeu;
+  alternativaDois.onclick = perdeu;
+  alternativaTres.onclick = perdeu;
+  alternativaQuatro.onclick = perdeu;
+  
+  
+
+  //titulo e nº da questao/resposta da questão
+  questaoNumero.innerText = '6';
+  questaoNumero.style.cursor = 'pointer';
+  questaoTitulo.innerText = 'qual é a resposta da segunda questão?';
+  questaoNumero.onclick = questaoDois;
+  
+  // faz tudo aparecer na tela
+  questao6.style.display = "block";
+}
 
 function animarBotaoJogar() 
 {

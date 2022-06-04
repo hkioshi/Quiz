@@ -157,13 +157,13 @@ cont = 1;
   questaoNumero.innerText = '3';
   questaoTitulo.innerText = 'x 9 + 20?';
 
-  alternativaUm.innerText = '47';
-  alternativaDois.innerText = '87';
+  alternativaUm.innerText = '81';
+  alternativaDois.innerText = '47';
   alternativaTres.innerText = '27';
   alternativaQuatro.innerText = '29';
 
-  alternativaUm.onclick = questaoQuatro;
-  alternativaDois.onclick = perdeu;
+  alternativaUm.onclick = perdeu;
+  alternativaDois.onclick = questaoQuatro;
   alternativaTres.onclick = perdeu;
   alternativaQuatro.onclick = perdeu;
   
@@ -200,15 +200,15 @@ cont = 1;
   questaoTitulo.innerText = 'Que planeta é esse?';
 
 
-  alternativaUm.innerText = 'júpiter';
+  alternativaUm.innerText = 'Marte';
   alternativaDois.innerText = 'Saturno';
   alternativaTres.innerText = 'Mercúrio';
-  alternativaQuatro.innerText = 'Marte';
+  alternativaQuatro.innerText = 'júpiter';
 
-  alternativaUm.onclick = questaoCinco;
+  alternativaUm.onclick = perdeu;
   alternativaDois.onclick = perdeu;
   alternativaTres.onclick = perdeu;
-  alternativaQuatro.onclick = perdeu;
+  alternativaQuatro.onclick = questaoCinco;
   
 
 }
@@ -225,8 +225,17 @@ function questaoCinco()
 
   const botaoCerto = document.createElement('div');
   botaoCerto.id = 'botaoCertoId';
-  document.body.appendChild(botaoCerto)
-  const botaoErrado =  
+  document.body.appendChild(botaoCerto);
+  const botaoErrado =  document.createElement('div');
+  botaoErrado.id = 'botaoErradoId';
+  document.body.appendChild(botaoErrado);
+
+  const botaonao = document.getElementById("botaoErradoId");
+  const botaosim = document.getElementById("botaoCertoId");
+  botaonao.innerText = 'esse é o errado';
+  botaonao.onclick = perdeu;
+  botaonao.onclick = questaoSeis;
+
 
   questao4.style.display = 'none';
   questao5.style.display = 'block';

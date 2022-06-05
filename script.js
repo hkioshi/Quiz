@@ -310,7 +310,7 @@ function questaoSeis()
 
 function questao7()
 {
-
+  cont  = 3;
   const questao6 = document.getElementById("questaoLayout1");
   const questao7 = document.getElementById("questaoLayout3");
   const alternativaUm = document.getElementById("quadrado7");
@@ -341,8 +341,9 @@ function questao7()
   questaoNumero.style.cursor = 'pointer';
  
   questaoNumero.onmouseenter = socorro;
+  questaoNumero.onclick = questao8;
   
-
+  
 
   questao6.style.display = 'none';
   questao7.style.display = "block";
@@ -355,8 +356,88 @@ function socorro()
 {
   const questaoNumero = document.getElementById("numeroIdTres");
   questaoNumero.innerText = 'Sim';
-  questao
 }
+
+function questao8()
+{
+  cont = 5;
+
+  const questao7 = document.getElementById("questaoLayout3");
+  const questao8 = document.getElementById("questaoLayout5");
+  const alternativaUm = document.getElementById("quadrado10");
+  const questaoNumero = document.getElementById("numeroIdCinco");
+  const questaoTitulo = document.getElementById("tituloIdCinco");
+  const truque = document.getElementById("truque");
+  const palitoId = document.getElementById("palito");
+
+  questaoNumero.innerText = '8';
+  questaoNumero.style.cursor = 'defalt';
+  questaoTitulo.innerText = 'Ja que estamos sem ideias, a alternativa da questão é essa aqui';
+
+
+  questao7.style.display = 'none';
+  questao8.style.display = "block";
+  alternativaUm.innerText = 'alternativa certa';
+  alternativaUm.style.paddingBottom = '20%';
+  
+  const alternativaDois = document.createElement("div");
+  alternativaDois.id = 'quadrado11'
+  alternativaDois.className = 'alternativa';
+  alternativaDois.innerText = 'ops, a certa é essa aq';
+  document.body.appendChild(alternativaDois);
+
+  const alternativaTres = document.createElement("div");
+  alternativaTres.id = 'quadrado12'
+  alternativaTres.className = 'alternativa';
+  alternativaTres.innerText = 'Agora vai?';
+  document.body.appendChild(alternativaTres);
+
+  alternativaUm.onclick = q2;
+}
+
+function q2()
+{
+  const alternativaUm = document.getElementById("quadrado10");
+  const alternativaDois = document.getElementById("quadrado11");
+  const alternativaTres = document.getElementById("quadrado12");
+
+  alternativaUm.style.display = 'none';
+  alternativaDois.style.display = 'block';
+  alternativaDois.onclick = q3;
+
+}
+
+function q3()
+{
+  const alternativaUm = document.getElementById("quadrado10");
+  const alternativaDois = document.getElementById("quadrado11");
+  const alternativaTres = document.getElementById("quadrado12");
+  const truque = document.getElementById("truque");
+
+  alternativaDois.style.display = 'none';
+  alternativaTres.style.display = 'block';
+  alternativaTres.onclick = q1;
+  truque.innerText = "--> alternativa real <--"
+  truque.onclick = questao9;
+}
+
+function q1()
+{
+  const alternativaUm = document.getElementById("quadrado10");
+  const alternativaDois = document.getElementById("quadrado11");
+  const alternativaTres = document.getElementById("quadrado12");
+
+  alternativaTres.style.display = 'none';
+  alternativaUm.style.display = 'block';
+  alternativaUm.onclick = q2;
+
+}
+
+function questao9()
+{
+  
+}
+
 
 function animarBotaoJogar() 
 {

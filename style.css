@@ -172,6 +172,30 @@ body
     left: 18%;
 }
 
+#quadrado10
+{
+    position: relative;
+    left: 18%;
+}
+
+#quadrado11
+{
+    position:absolute;
+    right : 0;
+    font-size:3vw;
+    line-height:300%;
+    display: none;
+}
+
+#quadrado12
+{
+    position:absolute;
+    left: 5%;
+    font-size:3vw;
+    line-height:300%;
+    display: none;
+}
+
 #questaoLayout1
 {
     display: none;
@@ -187,11 +211,22 @@ body
     display: none;
 }
 
+#questaoLayout4
+{
+    display: none;
+}
+
+#questaoLayout5
+{
+    display: none;
+}
+
+
 #perdeu
 {
     display: none;
 }
-.recomeçar{
+.recomecar{
     font-size: medium;
 }
 .tituloPerdeu{

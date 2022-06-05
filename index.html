@@ -13,7 +13,11 @@
             <div id="titulo"><h1>QUIZ</h1></div>
             <div id="jogar" onmouseenter="animarBotaoJogar()" onclick="jogar()">Jogar</div>
              <!--  coloca função segredo, so coloquei pra marcar o layout-->
-             <div id="segredo" onmouseenter="animarBotaoSegredo()" onclick="segredo()">segredo</div>
+             <div id="segredo" onmouseenter="animarBotaoSegredo()" onclick="abrirCodigo()">segredo</div>
+             <div id="cod" >
+                 <input type="text"  id="senha">
+                 <button onclick="verificarSenha()"> entrar </button>
+             </div>
         </div>
         <button onclick="aparece()" id="botaoAparece" style="display: none;">aparece</button>
         
@@ -86,6 +90,22 @@
         <div id="fim" style="display: none;">
             <div id="parabens">Parabéns</div>
             <div id="perdeuQuantas"></div>
+        </div>
+
+        <div id="select"> 
+            <button  onclick="questaoUm()">pergunta 1</button>
+            <button  onclick="questaoDois()">pergunta 2</button>
+            <button  onclick="questaoTres()">pergunta 3</button>
+            <button  onclick="questaoQuatro()">pergunta 4</button>
+            <button  onclick="questaoCinco()">pergunta 5</button>
+            <button  onclick="questaoSeis()">pergunta 6</button>
+            <button  onclick="questao7()">pergunta 7</button>
+            <button  onclick="questao8()">pergunta 8</button>
+            <button  onclick="questao9()">pergunta 9</button>
+            <button  onclick="questao10()">pergunta 10</button>
+            <button  onclick="questao11()">pergunta 11</button>
+            <button  onclick="questao12()">pergunta 12</button>
+           
         </div>
         <div id="rodape">BCC 1º semestre - <b class="fazNada" id="truque">2022</b></div>
         <script src="script.js"></script>

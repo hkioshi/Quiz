@@ -1,6 +1,36 @@
 //Esse variavel serve como contador, ele vai contar que fase voce esta
 let cont = 0 ;
 let contadorDeErrou = 0;
+let aberto = 1;
+
+function abrirCodigo()
+{
+  const codigo = document.getElementById("cod");
+  
+  if(aberto == 1)
+  {
+    aberto = 0;
+    codigo.style.display = 'block';
+  }
+  else
+  {
+    aberto = 1;
+    codigo.style.display = 'none';
+  }
+}
+
+function verificarSenha()
+{
+  const codigo = document.getElementById("senha");
+  let codigoTxt = codigo.value;
+
+  if(codigoTxt == "123456789012")
+  {
+    const select = document.getElementById("select");
+    select.style.display = 'block';
+  }
+}
+
 
 
 function jogar()
@@ -27,6 +57,8 @@ function questaoUm()
 {
   // Indicando qual layout esta
   cont = 1;
+  
+
   
   //encontra as divs por meio das ids
   const questao = document.getElementById("questaoLayout1");

@@ -327,7 +327,7 @@ function questao7()
 
   questaoNumero.innerText = '7';
   questaoNumero.style.cursor = 'defalt';
-  questaoTitulo.innerText = 'Os criadores ficaram sem ideias?';
+  questaoTitulo.innerText = 'Esta gostando do quiz?';
 
   alternativaUm.innerText = 'Nao';
   alternativaDois.innerText = 'Nao';
@@ -372,7 +372,7 @@ function questao8()
 
   questaoNumero.innerText = '8';
   questaoNumero.style.cursor = 'defalt';
-  questaoTitulo.innerText = 'Ja que estamos sem ideias, a alternativa da questão é essa aqui';
+  questaoTitulo.innerText = 'Que bom, entao iremos te dar uma questao facil';
 
 
   questao7.style.display = 'none';

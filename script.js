@@ -68,7 +68,8 @@ function perdeu()
   // aqui vai verificar qual questao voce esta, por isso o uso do contador
   const  questao = document.getElementById("questaoLayout" + cont);
   const  aparecerPerdeu = document.getElementById("perdeu");
-  const recomecar = document.getElementById("recomecar")
+  const recomecar = document.getElementById("recomecar");
+  const truque = document.getElementById("truque");
   //faz a questao desaparecer
   questao.style.display = "none";
   aparecerPerdeu.style.display = "block";
@@ -82,6 +83,7 @@ function perdeu()
   palitoId.style.backgroundImage = ''; 
   palitoId.style.left = '52,7%%';
 
+  truque.innerText = '2022';
 
   /* background-color:black;
     border-radius:20px ;
@@ -154,11 +156,11 @@ cont = 1;
   palitoId.style.display = 'none';
   questaoNumero.onclick = '';
 
-  questaoNumero.innerText = '3';
-  questaoTitulo.innerText = 'x 9 + 20?';
+  questaoNumero.innerText = '-3';
+  questaoTitulo.innerText = '+ 9 x 20 = ?';
 
-  alternativaUm.innerText = '81';
-  alternativaDois.innerText = '47';
+  alternativaUm.innerText = '180';
+  alternativaDois.innerText = '60';
   alternativaTres.innerText = '27';
   alternativaQuatro.innerText = '29';
 
@@ -268,21 +270,26 @@ function questaoSeis()
   const alternativaDois = document.getElementById("quadrado2");
   const alternativaTres = document.getElementById("quadrado3");
   const alternativaQuatro = document.getElementById("quadrado4");
-  const palitoId = document.getElementById("palito");
+  const palitoId = document.getElementById('palito');
+  const truque = document.getElementById("truque");
+  
 
   //apagando a questao anterior
 
   questao5.style.display = 'none';
-  document.body.removeChild(botaonao);
-  document.body.removeChild(botaosim);
+  //document.body.removeChild(botaonao);
+  //document.body.removeChild(botaosim);
   palitoId.style.display = 'none';
 
 
+  truque.innerText = '2010';
+  truque.onclick = questao7 ;
+
   //coloca texto nas divs das alternativas
-  alternativaUm.innerText = '<<';
-  alternativaDois.innerText = '<--|';
-  alternativaTres.innerText = '<-|';
-  alternativaQuatro.innerText = '<=';
+  alternativaUm.innerText = '2012';
+  alternativaDois.innerText = '2011';
+  alternativaTres.innerText = '2009';
+  alternativaQuatro.innerText = '2015';
 
   alternativaUm.onclick = perdeu;
   alternativaDois.onclick = perdeu;
@@ -293,13 +300,18 @@ function questaoSeis()
 
   //titulo e nº da questao/resposta da questão
   questaoNumero.innerText = '6';
-  questaoNumero.style.cursor = 'pointer';
-  questaoTitulo.innerText = 'qual é a resposta da segunda questão?';
-  questaoNumero.onclick = questaoDois;
+  questaoNumero.style.cursor = 'defalt';
+  questaoTitulo.innerText = 'qual é foi o ano de lançamento do primeiro genio quiz';
+  
   
   // faz tudo aparecer na tela
   questao6.style.display = "block";
 }
+
+function questao7()
+[
+
+]
 
 function animarBotaoJogar() 
 {
@@ -319,7 +331,7 @@ function final()
   const vezesPerdeu = document.getElementById('perdeuQuantas');
   finalDiv.style.display = 'block';
   vezesPerdeu.innerText = ('voce perdeu ' + contadorDeErrou + ' vezes');
-
+  
   
 
 }

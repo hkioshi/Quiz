@@ -150,9 +150,41 @@ body
     line-height: 200%;  
     cursor: pointer;
     font-family: sans-serif;
+    box-shadow: 2px 2px 5px red;
 
 }
-
+.alternativa:hover{
+    background-color: rgba(0, 255, 213, 0.493);;
+    transition: 2.0s;
+}
+.animaçãoQ2esquerda{
+    position: relative;
+    width: 35%;
+    height: 0;
+    padding-bottom: 10%;
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: 2px;
+    text-align: center;
+    line-height: 200%;  
+    cursor: pointer;
+    right: 100px;
+    box-shadow: 2px 2px 5px red;
+}
+.animaçãoQ2direita{
+    position: relative;
+    width: 35%;
+    height: 0;
+    padding-bottom: 10%;
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: 2px;
+    text-align: center;
+    line-height: 200%;  
+    cursor: pointer;
+    left: 100px;
+    box-shadow: 2px 2px 5px red;
+}
 #palito
 {
     background-color:black;
@@ -315,4 +347,15 @@ body
     bottom: 0;
    
 }
-
+.animacaoNumeroIdTres{
+    margin: 3%;
+    border: 6px solid rgba(0, 255, 221, 0.493);
+    height: 20%;
+    width: 9%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120%;
+    font-size: 4vw;
+    text-decoration: none;
+    font-family: sans-serif;
+}

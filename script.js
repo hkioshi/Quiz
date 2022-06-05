@@ -356,6 +356,7 @@ function socorro()
 {
   const questaoNumero = document.getElementById("numeroIdTres");
   questaoNumero.innerText = 'Sim';
+  questaoNumero.className = 'animacaoNumeroIdTres';
 }
 
 function questao8()
@@ -503,7 +504,14 @@ function animarBotaoSegredo()
   const jogar = document.getElementById('segredo');
   jogar.className = 'segredoAnimação';
 }
-
+function animarBotaoQuestao2() {
+  const mexerEsquerda = document.getElementById('quadrado5');
+  mexerEsquerda.className = 'animaçãoQ2esquerda';
+}
+function animarBotao2Questao2() {
+  const mexerDireita = document.getElementById('quadrado6');
+  mexerDireita.className = 'animaçãoQ2direita';
+}
 function final()
 {
   const finalDiv = document.getElementById('fim');

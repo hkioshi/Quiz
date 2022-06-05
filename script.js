@@ -125,9 +125,9 @@ function questaoDois()
 
   //coloca texto nas divs das alternativas
   questaoNumero.innerText = '2';
-  questaoTitulo.innerText = 'Lado direito ao contrario, invertido e virao 180°';
-  alternativaUm.innerText = '<--|';
-  alternativaDois.innerText = '|-->';
+  questaoTitulo.innerText = 'Lado direito ao contrario, invertido e virado 180°';
+  alternativaUm.innerText = '<--';
+  alternativaDois.innerText = '-->';
   alternativaDois.onclick = perdeu;
   alternativaUm.onclick = questaoTres;
 
@@ -160,8 +160,8 @@ cont = 1;
   questaoTitulo.innerText = '+ 9 x 20 = ?';
 
   alternativaUm.innerText = '180';
-  alternativaDois.innerText = '60';
-  alternativaTres.innerText = '27';
+  alternativaDois.innerText = '177';
+  alternativaTres.innerText = '60';
   alternativaQuatro.innerText = '29';
 
   alternativaUm.onclick = perdeu;
@@ -277,8 +277,8 @@ function questaoSeis()
   //apagando a questao anterior
 
   questao5.style.display = 'none';
-  //document.body.removeChild(botaonao);
-  //document.body.removeChild(botaosim);
+  document.body.removeChild(botaonao);
+  document.body.removeChild(botaosim);
   palitoId.style.display = 'none';
 
 
@@ -309,9 +309,54 @@ function questaoSeis()
 }
 
 function questao7()
-[
+{
 
-]
+  const questao6 = document.getElementById("questaoLayout1");
+  const questao7 = document.getElementById("questaoLayout3");
+  const alternativaUm = document.getElementById("quadrado7");
+  const alternativaDois = document.getElementById("quadrado8");
+  const alternativaTres = document.getElementById("quadrado9");
+  const questaoNumero = document.getElementById("numeroIdTres");
+  const questaoTitulo = document.getElementById("tituloIdTres");
+  const truque = document.getElementById("truque");
+  const palitoId = document.getElementById("palito");
+
+  truque.innerText = '2022'
+  truque.onclick = '';
+  questaoNumero 
+
+  questaoNumero.innerText = '7';
+  questaoNumero.style.cursor = 'defalt';
+  questaoTitulo.innerText = 'Os criadores ficaram sem ideias?';
+
+  alternativaUm.innerText = 'Nao';
+  alternativaDois.innerText = 'Nao';
+  alternativaTres.innerText = 'Nao';
+
+  alternativaUm.onclick = perdeu;
+  alternativaDois.onclick = perdeu;
+  alternativaTres.onclick = perdeu;
+  
+  
+  questaoNumero.style.cursor = 'pointer';
+ 
+  questaoNumero.onmouseenter = socorro;
+  
+
+
+  questao6.style.display = 'none';
+  questao7.style.display = "block";
+  
+
+
+}
+
+function socorro()
+{
+  const questaoNumero = document.getElementById("numeroIdTres");
+  questaoNumero.innerText = 'Sim';
+  questao
+}
 
 function animarBotaoJogar() 
 {
@@ -329,9 +374,10 @@ function final()
 {
   const finalDiv = document.getElementById('fim');
   const vezesPerdeu = document.getElementById('perdeuQuantas');
+  
   finalDiv.style.display = 'block';
   vezesPerdeu.innerText = ('voce perdeu ' + contadorDeErrou + ' vezes');
-  
-  
 
+  
+ 
 }

@@ -1,22 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 *{
     box-sizing: border-box;
-    font-family: sans-serif;
+    user-select: none;
 }
 
 body
 {
     margin: 0;
+    background-image:url("imagens/IMG-20220602-WA0010.jpg");
+    
+    background-size: 100%;
+    user-select: none;
+    background-repeat: no-repeat;
 }
 
 #telaInicial
 {
+    
     width: 300px;
     height: 300px;
 
     margin-top: -150px;
     margin-left: -150px;
     
-    top: 50%;
+    top: 30%;
     left: 50%;
     position: absolute;
 
@@ -28,21 +36,21 @@ body
 #titulo
 {
     text-align: center;
-   
+    font-family: 'Indie Flower', cursive;
     font-size: 3vw;
     
 }
 
 #jogar
 {
-    border: 1px double black;
+    border: 6px solid rgba(0, 255, 221, 0.493);
     text-align: center;
     padding: 1%;
     font-size: 1.5vw;
     cursor: pointer;
     transition: all 0.5s;
     border-radius: 10px;
-    
+    font-family: sans-serif;
 }
 
 .jogarAnimacao
@@ -52,17 +60,19 @@ body
     transform: rotate(360deg);
     transition:all 1s;
     transition-delay: 0.2s;
-    background-color: orange;
+    background-color: rgba(0, 255, 213, 0.493);
+    
 }
 #segredo{
     margin-top: 50px;
-    border: 1px solid black;
+    border: 6px solid rgba(0, 255, 221, 0.493);
     text-align: center;
     padding: 1%;
     font-size: 1.5vw;
     cursor: pointer;
     transition: all 0.5s;
     border-radius: 10px;
+    font-family: sans-serif;
     
 }
 
@@ -73,13 +83,13 @@ body
     transform: rotate(360deg);
     transition: all 1.1s;
     transition-delay: 0.2s;
-    background-color: orange;
+    background-color: rgba(0, 255, 213, 0.493);
 }
 
 .numeroQuestao
 {   
     margin: 3%;
-    border: 1px solid black;
+    border: 6px solid rgba(0, 255, 221, 0.493);
     height: 20%;
     width: 9%;
     border-radius: 50%;
@@ -87,12 +97,12 @@ body
     line-height: 120%;
     font-size: 7vw;
     text-decoration: none;
+    font-family: sans-serif;
 }
  
 .numeroQuestao:hover
 {   transition: 1s;
-    cursor: pointer;
-    background-color: blueviolet;
+    background-color: rgba(0, 255, 221, 0.493);
 }
 
 
@@ -110,6 +120,7 @@ body
     line-height: 200%;
     margin-top: 2%;
     font-size: 5vw;
+    font-family: 'Indie Flower', cursive;
     
 }
 
@@ -138,25 +149,83 @@ body
     text-align: center;
     line-height: 200%;  
     cursor: pointer;
-     
-}
+    font-family: sans-serif;
+    box-shadow: 2px 2px 5px red;
 
+}
+.alternativa:hover{
+    background-color: rgba(0, 255, 213, 0.493);;
+    transition: 2.0s;
+}
+.animaçãoQ2esquerda{
+    position: relative;
+    width: 35%;
+    height: 0;
+    padding-bottom: 10%;
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: 2px;
+    text-align: center;
+    line-height: 200%;  
+    cursor: pointer;
+    right: 100px;
+    box-shadow: 2px 2px 5px red;
+}
+.animaçãoQ2direita{
+    position: relative;
+    width: 35%;
+    height: 0;
+    padding-bottom: 10%;
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: 2px;
+    text-align: center;
+    line-height: 200%;  
+    cursor: pointer;
+    left: 100px;
+    box-shadow: 2px 2px 5px red;
+}
 #palito
 {
-    background-color: black;
+    background-color:black;
     border-radius:20px ;
     height: 0;
     padding-bottom: 6%;
     width: 0.5%;
     position: relative;
     left: 52.7%;
-    
+    margin-top :-5%;
+    background-repeat: no-repeat;
 }
 
 #quadrado9
 {
     position: relative;
     left: 18%;
+}
+
+#quadrado10
+{
+    position: relative;
+    left: 18%;
+}
+
+#quadrado11
+{
+    position:absolute;
+    right : 0;
+    font-size:3vw;
+    line-height:300%;
+    display: none;
+}
+
+#quadrado12
+{
+    position:absolute;
+    left: 5%;
+    font-size:3vw;
+    line-height:300%;
+    display: none;
 }
 
 #questaoLayout1
@@ -174,15 +243,119 @@ body
     display: none;
 }
 
+#questaoLayout4
+{
+    display: none;
+}
+
+#questaoLayout5
+{
+    display: none;
+}
+
+
 #perdeu
 {
     display: none;
 }
-.recomeçar{
+.recomecar{
     font-size: medium;
 }
 .tituloPerdeu{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 8vw;
+   font-family: 'Indie Flower', cursive;
+   position: relative;
+    top: 10%;
+    
+
+}
+
+#perdeu
+{
+    height: 0;
+    padding-bottom: 10%;
+    text-align: center;
+    position: relative;
+    top: 100px;
+
+}
+
+#recomecar
+{
+    border: 6px solid rgba(0, 255, 221, 0.493);
+    width: 15%;
+    position: relative;
+    left: 42.5%;
+    font-size: 2vw;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
+#planeta
+{
+    width: 100px;
+    height: 100px;
+    background-image: url('imagens/jupter.png');
+}
+
+#botaoCertoId
+{
+    background-color: black;
+    width: 4%;
+    height: 0;
+    padding-bottom: 4%;
+    border-radius: 50%;
+    position: relative;
+    left: 10%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#botaoCertoId:hover
+{
+    opacity: 1;
+}
+
+#botaoErradoId
+{
+    font-size: 3vw;
+    font-family: sans-serif;
+    width: 10%;
+    height: 0;
+    padding-bottom: 5%;
+    border-radius: 20px;
+    position: relative;
+    left: 60%;
+    opacity: 0;
+
+    transition: all 1s;
+}
+
+#botaoErradoId:hover
+{
+    opacity: 1;
+}
+
+#rodape
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+   
+}
+.animacaoNumeroIdTres{
+    margin: 3%;
+    border: 6px solid rgba(0, 255, 221, 0.493);
+    height: 20%;
+    width: 9%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120%;
+    font-size: 4vw;
+    text-decoration: none;
+    font-family: sans-serif;
+}

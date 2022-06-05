@@ -377,6 +377,7 @@ function questao8()
 
   questao7.style.display = 'none';
   questao8.style.display = "block";
+  quadrado10.style.display = "block";
   alternativaUm.innerText = 'alternativa certa';
   alternativaUm.style.paddingBottom = '20%';
   
@@ -435,9 +436,61 @@ function q1()
 
 function questao9()
 {
+  // Indicando qual layout esta
+  cont = 1;
   
+  //encontra as divs por meio das ids
+  const questao8 = document.getElementById("questaoLayout5");
+  const questao9 = document.getElementById("questaoLayout1");
+  const botaonao = document.getElementById("botaoErradoId");
+  const botaosim = document.getElementById("botaoCertoId");
+  const questaoNumero = document.getElementById("numeroIdUm");
+  const questaoTitulo = document.getElementById("tituloIdUm");
+  const alternativaUm = document.getElementById("quadrado1");
+  const alternativaDois = document.getElementById("quadrado2");
+  const alternativaTres = document.getElementById("quadrado3");
+  const alternativaQuatro = document.getElementById("quadrado4");
+  const alternativaCinco = document.getElementById("quadrado11");
+  const alternativaSeis = document.getElementById("quadrado12");
+  const palitoId = document.getElementById("palito");
+  const truque = document.getElementById("truque");
+
+  truque.innerText = "2022"
+  truque.onclick = '';
+
+  //apagando a questao anterior
+
+  questao8.style.display = 'none';
+  palitoId.style.display = 'none';
+  alternativaCinco.style.display = 'none';
+  alternativaSeis.style.display = 'none';
+
+
+  //coloca texto nas divs das alternativas
+  alternativaUm.innerText = '<<';
+  alternativaDois.innerText = '<--';
+  alternativaTres.innerText = '<--|';
+  alternativaQuatro.innerText = '<=';
+
+  alternativaUm.onclick = perdeu;
+  alternativaDois.onclick = questao10;
+  alternativaTres.onclick = perdeu;
+  alternativaQuatro.onclick = perdeu;
+  
+  
+
+  //titulo e nº da questao/resposta da questão
+  questaoNumero.innerText = '9';
+  questaoTitulo.innerText = 'qual é a resposta da segunda questão?';
+  
+  // faz tudo aparecer na tela
+  questao9.style.display = "block";
 }
 
+function questao10()
+{
+
+}
 
 function animarBotaoJogar() 
 {

@@ -130,11 +130,20 @@ function questaoDois()
   alternativaDois.innerText = '-->';
   alternativaDois.onclick = perdeu;
   alternativaUm.onclick = questaoTres;
+  alternativaUm.onmouseenter = animarBotaoQuestao2;
+  alternativaDois.onmouseenter = animarBotao2Questao2;
 
   alternativaUm.style.display = 'block';
   alternativaDois.style.display = 'block';
   
-  
+  /*function animarBotaoQuestao2() {
+  const mexerEsquerda = document.getElementById('quadrado5');
+  mexerEsquerda.className = 'animaçãoQ2esquerda';
+}
+function animarBotao2Questao2() {
+  const mexerDireita = document.getElementById('quadrado6');
+  mexerDireita.className = 'animaçãoQ2direita';
+}*/
 
 }
 
@@ -490,6 +499,26 @@ function questao9()
 
 function questao10()
 {
+  const questao9 = document.getElementById("questaoLayout1");
+  const questao10 = document.getElementById("questaoLayout2");
+  const botaonao = document.getElementById("botaoErradoId");
+  const botaosim = document.getElementById("botaoCertoId");
+  const questaoNumero = document.getElementById("numeroIdUm");
+  const questaoTitulo = document.getElementById("tituloIdUm");
+  const alternativaUm = document.getElementById("quadrado1");
+  const alternativaDois = document.getElementById("quadrado2");
+  const alternativaTres = document.getElementById("quadrado3");
+  const alternativaQuatro = document.getElementById("quadrado4");
+  const alternativaCinco = document.getElementById("quadrado11");
+  const alternativaSeis = document.getElementById("quadrado12");
+  const palitoId = document.getElementById("palito");
+  const truque = document.getElementById("truque");
+
+  questao9.style.display = 'none';
+  questao10.style.display = 'none';
+
+  
+  
 
 }
 

@@ -150,11 +150,11 @@ body
     line-height: 200%;  
     cursor: pointer;
     font-family: sans-serif;
-    box-shadow: 2px 2px 5px red;
+    box-shadow: 2px 2px 5px rgba(43, 43, 43, 0.288);
 
 }
 .alternativa:hover{
-    background-color: rgba(0, 255, 213, 0.493);;
+    background-color: rgba(159, 241, 255, 0.432);
     transition: 2.0s;
 }
 .animaçãoQ2esquerda{
@@ -169,7 +169,7 @@ body
     line-height: 200%;  
     cursor: pointer;
     right: 100px;
-    box-shadow: 2px 2px 5px red;
+    box-shadow: 2px 2px 5px rgba(43, 43, 43, 0.288);
 }
 .animaçãoQ2direita{
     position: relative;
@@ -183,7 +183,7 @@ body
     line-height: 200%;  
     cursor: pointer;
     left: 100px;
-    box-shadow: 2px 2px 5px red;
+    box-shadow: 2px 2px 5px rgba(43, 43, 43, 0.288);
 }
 #palito
 {

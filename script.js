@@ -68,8 +68,10 @@ function questao1() {
   const alternativaDois = document.getElementById("quadrado2");
   const alternativaTres = document.getElementById("quadrado3");
   const alternativaQuatro = document.getElementById("quadrado4");
-
-
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '1';
+  numeroSecreto.style.display = 'block';
+  
   //coloca texto nas divs das alternativas
   alternativaUm.innerText = '2';
   alternativaDois.innerText = '4';
@@ -127,6 +129,9 @@ function perdeu() {
   palitoId.style.border = '';
   truque.innerText = '2022';
 
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.style.display = 'none';
+
   // solta o famoso perdeu do faustao quando voce erra
   const music = new Audio('faustao-errou.mp3');
   music.play();
@@ -146,7 +151,8 @@ function triste()
   // aqui vai verificar qual questao voce esta, por isso o uso do contador
   const questao = document.getElementById("questaoLayout" + cont);
   
-  
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.style.display = 'none';
 
   // area de correçoes
   const aparecerPerdeu = document.getElementById("perdeu");
@@ -195,6 +201,8 @@ function questao2() {
   const questaoTitulo = document.getElementById("tituloIdDois");
   const alternativaUm = document.getElementById("quadrado5");
   const alternativaDois = document.getElementById("quadrado6");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '2';
 
   //Fazendo questão 1 desaparecer e questão 2 aparecer
   questaoUm.style.display = 'none';
@@ -234,6 +242,8 @@ function questao3() {
   const alternativaTres = document.getElementById("quadrado3");
   const alternativaQuatro = document.getElementById("quadrado4");
   const palitoId = document.getElementById("palito");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '3';
 
   // faz as questao anterior sumir e a atual/palito aparecer
   questaoDois.style.display = 'none';
@@ -284,6 +294,8 @@ function questao4() {
   const alternativaTres = document.getElementById("quadrado3");
   const alternativaQuatro = document.getElementById("quadrado4");
   const palitoId = document.getElementById("palito");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '4';
 
   // aqui podemos ver a historia de como um palito se transformou em um planeta :D
   palitoId.style.border = '';
@@ -328,6 +340,8 @@ function questao5() {
   const alternativaDois = document.getElementById("quadrado6");
   const questaoNumero = document.getElementById("numeroIdDois");
   const questaoTitulo = document.getElementById("tituloIdDois");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '5';
 
 
   //butoes secretos(kkkk, muita gente não vai passar daqui)
@@ -380,6 +394,8 @@ function questao6() {
   const alternativaQuatro = document.getElementById("quadrado4");
   const palitoId = document.getElementById('palito');
   const truque = document.getElementById("truque");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '6';
 
 
   //apagando a questao anterior
@@ -431,6 +447,8 @@ function questao7() {
   const questaoTitulo = document.getElementById("tituloIdTres");
   const truque = document.getElementById("truque");
   const palitoId = document.getElementById("palito");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '7';
 
   //Sem truque
   truque.innerText = '2022'
@@ -480,6 +498,8 @@ function questao8() {
   const questaoTitulo = document.getElementById("tituloIdCinco");
   const truque = document.getElementById("truque");
   const palitoId = document.getElementById("palito");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '8';
 
   //texto da pergunta
   questaoNumero.innerText = '8';
@@ -574,6 +594,8 @@ function questao9()
   const alternativaSeis = document.getElementById("quadrado12");
   const palitoId = document.getElementById("palito");
   const truque = document.getElementById("truque");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '9';
 
   //AQ É HONESTO, NUM TEM TRUQUE NENHUM, CONFIA
   truque.innerText = "2022"
@@ -627,7 +649,9 @@ function questao10()
   const alternativaCinco = document.getElementById("quadrado11");
   const alternativaSeis = document.getElementById("quadrado12");
   const palitoId = document.getElementById("palito");
-  
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '0';
+
   //coloca os textos da questao
   questaoNumero.innerText = '10';
   alternativaUm.innerText = 'preta c/ listras brancas'
@@ -664,6 +688,8 @@ function questao11()
   const questaoTitulo = document.getElementById("tituloIdSeis");
   const palito = document.getElementById("palito2");
   const video = document.getElementById("video");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '1';
 
   questao10.style.display = 'none';
   questao11.style.display = 'block';
@@ -695,6 +721,8 @@ function questao12()
   const alternativaUm = document.getElementById("quadrado17");
   const questaoNumero = document.getElementById("numeroIdSete");
   const questaoTitulo = document.getElementById("tituloIdSete");
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.innerText = '2';
 
   questaoTitulo.innerText = 'Ufa, chegamos na ultima pergunta, clique pra acabar, prometemos que não irá ter nenhum botao escondido ';
   questaoNumero.innerText = '12';
@@ -757,10 +785,14 @@ function voltar()
 }
 
 //O FINAL
-function final() {
+function final() { 
+  const questao12 = document.getElementById('questaoLayout7')
   const finalDiv = document.getElementById('fim');
   const vezesPerdeu = document.getElementById('perdeuQuantas');
+  const numeroSecreto = document.getElementById("numeroSecreto");
+  numeroSecreto.style.display = 'none';
 
+  questao12.style.display = 'none';
   finalDiv.style.display = 'block';
   // quantas vezes voce perdeu?
   vezesPerdeu.innerText = ('voce perdeu ' + contadorDeErrou + ' vezes');

@@ -473,3 +473,22 @@ body {
     font-family: sans-serif;
     background-color: rgb(240, 240, 240);
 }
+
+#fim
+{
+    position:absolute;
+    left:39%;
+    top:40%;
+    font-size:3vw;
+    font-family:'Indie Flower', cursive;
+    text-align:center;
+}
+
+#numeroSecreto
+{
+    position: absolute;
+    bottom: 0;
+    font-family: 'Pacifico', cursive;
+    font-size:2vw;
+    display: none;
+}

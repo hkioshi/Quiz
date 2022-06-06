@@ -13,7 +13,11 @@
             <div id="titulo"><h1>QUIZ</h1></div>
             <div id="jogar" onmouseenter="animarBotaoJogar()" onclick="jogar()">Jogar</div>
              <!--  coloca função segredo, so coloquei pra marcar o layout-->
-             <div id="segredo" onmouseenter="animarBotaoSegredo()" onclick="segredo()">segredo</div>
+             <div id="segredo" onmouseenter="animarBotaoSegredo()" onclick="abrirCodigo()">segredo</div>
+             <div id="cod" >
+                 <input type="text"  id="senha">
+                 <button onclick="verificarSenha()"> entrar </button>
+             </div>
         </div>
         <button onclick="aparece()" id="botaoAparece" style="display: none;">aparece</button>
         
@@ -39,8 +43,8 @@
                 <div class="titulo" id="tituloIdDois"></div>
             </div>
             <div id="quadradoDeAlternativas">
-                <div  class="alternativa" id="quadrado5" onmouseenter="animarBotaoQuestao2()"></div>
-                <div  class="alternativa" id="quadrado6" onmouseenter="animarBotao2Questao2()"></div>
+                <div  class="alternativa" id="quadrado5"></div>
+                <div  class="alternativa" id="quadrado6"></div>
             </div>
 
         </div>
@@ -79,13 +83,62 @@
         </div>
 
         <div id="perdeu">
-            <div class="tituloPerdeu">Errou</div>
+            <div class="tituloPerdeu" id="tituloPerdeu">Errou</div>
             <div onclick="recomecar()" id="recomecar">Recomeçar</div>
         </div>
         
         <div id="fim" style="display: none;">
             <div id="parabens">Parabéns</div>
             <div id="perdeuQuantas"></div>
+        </div>
+            
+        <div id="questaoLayout6" >
+                <div class="top" id="topo">
+                    <div class="numeroQuestao" id="numeroIdSeis"></div>
+                    <div class="titulo" id="tituloIdSeis"></div>
+                </div>
+                <div id="palito2"></div>
+                <div id="quadradoDeAlternativas">
+                    <div  class="alternativa" id="quadrado13"></div>
+                    <div  class="alternativa" id="quadrado14"></div>
+                    <div  class="alternativa" id="quadrado15"></div>
+                    <div  class="alternativa" id="quadrado16"></div>
+                </div>    
+        </div>          
+
+        <div id="questaoLayout7" >
+            <div class="top" id="topo">
+                <div class="numeroQuestao" id="numeroIdSete"></div>
+                <div class="titulo" id="tituloIdSete"></div>
+            </div>
+            
+            <div id="quadradoDeAlternativas">
+                <div  class="alternativa" id="quadrado17" onmouseenter="trocaDePosicao()"></div>
+               
+            </div>    
+    </div>     
+
+        <div id="divideo">
+            <video id="vconfig" src="video.mp4"></video>
+            <div id="voltar" onclick="voltar()">voltar</div>
+            <button id="play" onclick="playPause()">play/pause</button>
+        </div>
+
+
+        <div id="select"> 
+            <button  onclick="questaoUm()">pergunta 1</button>
+            <button  onclick="questaoDois()">pergunta 2</button>
+            <button  onclick="questaoTres()">pergunta 3</button>
+            <button  onclick="questaoQuatro()">pergunta 4</button>
+            <button  onclick="questaoCinco()">pergunta 5</button>
+            <button  onclick="questaoSeis()">pergunta 6</button>
+            <button  onclick="questao7()">pergunta 7</button>
+            <button  onclick="questao8()">pergunta 8</button>
+            <button  onclick="questao9()">pergunta 9</button>
+            <button  onclick="questao10()">pergunta 10</button>
+            <button  onclick="questao11()">pergunta 11</button>
+            <button  onclick="questao12()">pergunta 12</button>
+           
         </div>
         <div id="rodape">BCC 1º semestre - <b class="fazNada" id="truque">2022</b></div>
         <script src="script.js"></script>

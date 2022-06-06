@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
     box-sizing: border-box;
@@ -116,7 +117,8 @@ body {
 
 }
 
-#quadradoDeAlternativas {
+#quadradoDeAlternativas 
+{
     display: flex;
     width: 60%;
     height: fit-content;
@@ -128,8 +130,9 @@ body {
     font-size: 3vw;
 }
 
-.alternativa {
-
+.alternativa 
+{
+    font-family:sans-serif;
     width: 35%;
     height: 0;
     padding-bottom: 10%;
@@ -140,17 +143,19 @@ body {
     line-height: 200%;
     cursor: pointer;
     font-family: sans-serif;
-    box-shadow: 2px 2px 5px red;
+    box-shadow: 2px 2px 5px rgba(43, 43, 43, 0.288);
 
 }
 
-.alternativa:hover {
+.alternativa:hover 
+{
     background-color: rgba(0, 255, 213, 0.493);
     ;
-    transition: 2.0s;
+    transition: all 2.0s;
 }
 
-.animaçãoQ2esquerda {
+.animaçãoQ2esquerda
+ {
     position: relative;
     width: 35%;
     height: 0;
@@ -162,10 +167,11 @@ body {
     line-height: 200%;
     cursor: pointer;
     right: 100px;
-    box-shadow: 2px 2px 5px red;
+    box-shadow: 2px 2px 5px rgba(43, 43, 43, 0.288);
 }
 
-.animaçãoQ2direita {
+.animaçãoQ2direita 
+{
     position: relative;
     width: 35%;
     height: 0;
@@ -177,10 +183,11 @@ body {
     line-height: 200%;
     cursor: pointer;
     left: 100px;
-    box-shadow: 2px 2px 5px red;
+    box-shadow: 2px 2px 5px rgba(43, 43, 43, 0.288);
 }
 
-#palito {
+#palito 
+{
     background-color: black;
     border-radius: 20px;
     height: 0;
@@ -192,17 +199,37 @@ body {
     background-repeat: no-repeat;
 }
 
-#quadrado9 {
+#palito2
+{   
+    border: 3px solid black;
+    border-radius: 4px;
+    height: 0;
+    padding-bottom: 6%;
+    width: 14%;
+    position: relative;
+    left: 47%;
+    margin-top: -5%;
+    text-align:center;
+    line-height:140%;
+    font-family:sans-serif;
+    font-size:4vw;
+}
+
+
+#quadrado9 
+{
     position: relative;
     left: 18%;
 }
 
-#quadrado10 {
+#quadrado10 
+{
     position: relative;
     left: 18%;
 }
 
-#quadrado11 {
+#quadrado11 
+{
     position: absolute;
     right: 0;
     font-size: 3vw;
@@ -210,7 +237,8 @@ body {
     display: none;
 }
 
-#quadrado12 {
+#quadrado12 
+{
     position: absolute;
     left: 5%;
     font-size: 3vw;
@@ -218,36 +246,71 @@ body {
     display: none;
 }
 
-#questaoLayout1 {
-    display: none;
-}
-
-#questaoLayout2 {
-    display: none;
-}
-
-#questaoLayout3 {
-    display: none;
-}
-
-#questaoLayout4 {
-    display: none;
-}
-
-#questaoLayout5 {
-    display: none;
+#quadrado17
+{
+    position: absolute;
+    left: 25%;
+    transition: all 0.02s;
 }
 
 
-#perdeu {
+#questaoLayout1 
+{
     display: none;
 }
 
-.recomecar {
+#questaoLayout2 
+{
+    display: none;
+}
+
+#questaoLayout3 
+{
+    display: none;
+}
+
+#questaoLayout4 
+{
+    display: none;
+}
+
+#questaoLayout5 
+{
+    display: none;
+}
+
+#questaoLayout6
+{
+    display: none;
+}
+
+#questaoLayout7
+{
+    display: none;
+}
+
+#cod
+{
+    display: none;
+}
+
+#select
+{
+    display: none;
+}
+
+#perdeu 
+{
+    display: none;
+}
+
+.recomecar 
+{
     font-size: medium;
 }
 
-.tituloPerdeu {
+.tituloPerdeu 
+{
     font-size: 8vw;
     font-family: 'Indie Flower', cursive;
     position: relative;
@@ -256,7 +319,8 @@ body {
 
 }
 
-#perdeu {
+#perdeu 
+{
     height: 0;
     padding-bottom: 10%;
     text-align: center;
@@ -265,7 +329,8 @@ body {
 
 }
 
-#recomecar {
+#recomecar 
+{
     border: 6px solid rgba(0, 255, 221, 0.493);
     width: 15%;
     position: relative;
@@ -279,13 +344,15 @@ body {
 }
 
 
-#planeta {
+#planeta 
+{
     width: 100px;
     height: 100px;
     background-image: url('imagens/jupter.png');
 }
 
-#botaoCertoId {
+#botaoCertoId 
+{
     background-color: black;
     width: 4%;
     height: 0;
@@ -298,7 +365,8 @@ body {
 
 }
 
-#botaoCertoId:hover {
+#botaoCertoId:hover 
+{
     opacity: 1;
 }
 
@@ -324,6 +392,7 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
+    font-family: 'Pacifico', cursive;
 
 }
 
@@ -360,4 +429,47 @@ body {
 
 #numero3:hover {
     opacity: 1;
+}
+
+#divideo
+{
+    position: relative;
+    left: 38%;
+    display: flex;
+    width: 50%;
+    margin-top: 1%;
+    display: none;
+}
+
+#vconfig
+{
+    width: 50%;
+}
+
+#play
+{
+    position: absolute;
+    height: 20%;
+    line-height: 400%;
+    top:50%;
+    right:20%;
+    font-size: 2vw;
+   
+}
+
+#voltar
+{
+    position: absolute;
+    border: 1px solid black ;
+    text-align: center;
+    line-height: 400%;
+    font-size: 2vw;
+    left:-30%;
+    top: 50%;
+    width: 12%;
+    height: 0;
+    padding-bottom: 15%;
+    border-radius: 5px;
+    font-family: sans-serif;
+    background-color: rgb(240, 240, 240);
 }

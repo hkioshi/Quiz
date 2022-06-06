@@ -106,6 +106,7 @@ function perdeu() {
 
   // aqui vai verificar qual questao voce esta, por isso o uso do contador
   const questao = document.getElementById("questaoLayout" + cont);
+  const aparecerPerdeu = document.getElementById("perdeu");
   
   //faz a questao desaparecer
   questao.style.display = "none";
@@ -113,7 +114,6 @@ function perdeu() {
 
   //area de correçoes(preguiça de comentar cada correçao -_-)
   const palitoId = document.getElementById("palito");
-  const aparecerPerdeu = document.getElementById("perdeu");
   const recomecar = document.getElementById("recomecar");
   const truque = document.getElementById("truque");
   const tituloPerdeu = document.getElementById("tituloPerdeu");
@@ -267,7 +267,7 @@ function questao4() {
   cont = 1;
 
   //coisa do caio(num mexa)
-  document.body.removeChild(numero3);
+  //document.body.removeChild(numero3);
 
   //encontra as divs por meio das ids
   const questaoTres = document.getElementById("questaoLayout1");
@@ -337,7 +337,7 @@ function questao5() {
   const botaosim = document.getElementById("botaoCertoId");
   botaonao.innerText = 'esse é o errado';
   botaonao.onclick = perdeu;
-  botaosim.onclick = questaoSeis;
+  botaosim.onclick = questao6;
 
  //apagando a questao anterior
   questao4.style.display = 'none';

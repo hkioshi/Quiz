@@ -101,6 +101,7 @@ function perdeu() {
   const aparecerPerdeu = document.getElementById("perdeu");
   const recomecar = document.getElementById("recomecar");
   const truque = document.getElementById("truque");
+  const tituloPerdeu = document.getElementById("tituloPerdeu");
   //faz a questao desaparecer
   questao.style.display = "none";
   aparecerPerdeu.style.display = "block";
@@ -119,6 +120,14 @@ function perdeu() {
   const music = new Audio('faustao-errou.mp3');
   music.play();
 
+  let verificacao = tituloPerdeu.value;
+
+  if (verificacao != "errou")
+  {
+    tituloPerdeu.innerText = 'errou';
+  }
+
+  
 
   
 
@@ -132,6 +141,30 @@ function perdeu() {
     margin-top :-5%;
     background-repeat: no-repeat;*/
 }
+
+function triste()
+{
+  // aqui vai verificar qual questao voce esta, por isso o uso do contador
+  const questao = document.getElementById("questaoLayout" + cont);
+  const aparecerPerdeu = document.getElementById("perdeu");
+  const recomecar = document.getElementById("recomecar");
+  const truque = document.getElementById("truque");
+  const tituloPerdeu = document.getElementById("tituloPerdeu");
+  //faz a questao desaparecer
+  questao.style.display = "none";
+  aparecerPerdeu.style.display = "block";
+
+  const palitoId = document.getElementById("palito");
+  tituloPerdeu.innerText = ';-;'
+  palitoId.style.width = '0.5%';
+  palitoId.style.height = '0';
+  palitoId.style.display = 'block';
+  palitoId.style.backgroundColor = 'black';
+  palitoId.style.backgroundImage = '';
+  palitoId.style.left = '52,7%%';
+  palitoId.style.border = '';
+  truque.innerText = '2022';
+} 
 
 function recomecar() {
   cont = 0;
@@ -386,9 +419,9 @@ function questao7() {
   alternativaDois.innerText = 'Nao';
   alternativaTres.innerText = 'Nao';
 
-  alternativaUm.onclick = perdeu;
-  alternativaDois.onclick = perdeu;
-  alternativaTres.onclick = perdeu;
+  alternativaUm.onclick = triste;
+  alternativaDois.onclick = triste;
+  alternativaTres.onclick = triste;
   
   
   questaoNumero.style.cursor = 'pointer';
@@ -561,18 +594,14 @@ function questao10()
 
   alternativaTres.style.display = 'none';
   alternativaQuatro.style.display = 'none';
-  questaoTitulo.innerText = 'a zebra é branca com listras pretas ou treta com listras brancas';
+  questaoTitulo.innerText = 'a zebra é branca com listras pretas ou preta com listras brancas?';
   palitoId.style.display = 'none';
 
   alternativaDois.onclick = perdeu;
   alternativaUm.onclick = questao11;
   
 
-  palitoId.style.backgroundRepeat = 'noRepeat';
-  palitoId.style.left = '50%';
-  palitoId.style.border = '1px solid black';
-  palitoId.style.borderRadius = '20px';
-
+ 
 }
 
 function questao11()

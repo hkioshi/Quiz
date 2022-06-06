@@ -379,7 +379,7 @@ function questao5() {
 
   //textos dessa questão
   questaoNumero.innerText = '5';
-  questaoTitulo.innerText = 'Encontre o botao escondido';
+  questaoTitulo.innerText = 'Encontre o botão escondido';
 
 
 }
@@ -436,7 +436,7 @@ function questao6() {
   //titulo e nº da questao
   questaoNumero.innerText = '6';
   questaoNumero.style.cursor = 'defalt';
-  questaoTitulo.innerText = 'qual foi o ano de lançamento do primeiro genio quiz';
+  questaoTitulo.innerText = 'Qual foi o ano de lançamento do primeiro gênio quiz';
 
 
   // faz tudo aparecer na tela
@@ -468,9 +468,9 @@ function questao7() {
   questaoNumero.innerText = '7';
   questaoNumero.style.cursor = 'defalt';
   questaoTitulo.innerText = 'Esta gostando do quiz?';
-  alternativaUm.innerText = 'Nao';
-  alternativaDois.innerText = 'Nao';
-  alternativaTres.innerText = 'Nao';
+  alternativaUm.innerText = 'Não';
+  alternativaDois.innerText = 'Não';
+  alternativaTres.innerText = 'Não';
 
   //nao é a resposta da questao
   alternativaUm.onclick = triste;

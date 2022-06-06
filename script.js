@@ -179,6 +179,7 @@ function questaoTres() {
 function questaoQuatro() {
   cont = 1;
 
+  document.body.removeChild(numero3);
   const questaoTres = document.getElementById("questaoLayout1");
   const questaoNumero = document.getElementById("numeroIdUm");
   const questaoTitulo = document.getElementById("tituloIdUm");

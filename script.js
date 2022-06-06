@@ -75,6 +75,12 @@ function questaoUm() {
   alternativaTres.onclick = perdeu;
   alternativaQuatro.onclick = perdeu;
 
+  alternativaTres.style.display = 'block';
+  alternativaQuatro.style.display = 'block';
+
+  alternativaUm.style.paddingBottom = '10%'
+  alternativaDois.style.paddingBottom = '10%'
+
 
 
   //titulo e nº da questao/resposta da questão
@@ -107,8 +113,14 @@ function perdeu() {
   palitoId.style.backgroundColor = 'black';
   palitoId.style.backgroundImage = '';
   palitoId.style.left = '52,7%%';
-
+  palitoId.style.border = '';
   truque.innerText = '2022';
+
+  const music = new Audio('faustao-errou.mp3');
+  music.play();
+
+
+  
 
   /* background-color:black;
     border-radius:20px ;
@@ -192,20 +204,20 @@ function questaoTres() {
   palitoId.style.display = 'none';
   questaoNumero.onclick = '';
 
-  questaoNumero.innerText = '3';
+  questaoNumero.innerText = '-3';
   //
   const numero3 = document.createElement('div')
   numero3.id = 'numero3';
   numero3.innerText = '-3 +';
   document.body.appendChild(numero3);
   //
-  questaoTitulo.innerText = ' 9 x 20 = ?';
+  questaoTitulo.innerText = ' + 9 x 20 = ?';
 
   alternativaUm.innerText = '180';
   alternativaDois.innerText = '177';
   alternativaTres.innerText = '60';
   alternativaQuatro.innerText = '29';
-
+  
   alternativaUm.onclick = perdeu;
   alternativaDois.onclick = questaoQuatro;
   alternativaTres.onclick = perdeu;
@@ -228,13 +240,14 @@ function questaoQuatro() {
   const alternativaQuatro = document.getElementById("quadrado4");
   const palitoId = document.getElementById("palito");
 
+  palitoId.style.border = '';
   palitoId.style.width = '10%';
   palitoId.style.height = '10%';
   palitoId.style.display = 'block';
   palitoId.style.backgroundColor = 'rgb(223, 254, 241)';
   palitoId.style.backgroundImage = 'url(imagens/jupter.png)';
   palitoId.style.backgroundSize = '60%';
-
+  
   palitoId.style.backgroundRepeat = 'noRepeat';
   palitoId.style.left = '52.7%';
 
@@ -526,7 +539,7 @@ function questao9()
 function questao10()
 {
   const questao9 = document.getElementById("questaoLayout1");
-  const questao10 = document.getElementById("questaoLayout2");
+  
   const botaonao = document.getElementById("botaoErradoId");
   const botaosim = document.getElementById("botaoCertoId");
   const questaoNumero = document.getElementById("numeroIdUm");
@@ -538,13 +551,32 @@ function questao10()
   const alternativaCinco = document.getElementById("quadrado11");
   const alternativaSeis = document.getElementById("quadrado12");
   const palitoId = document.getElementById("palito");
-  const truque = document.getElementById("truque");
-
-  questao9.style.display = 'none';
-  questao10.style.display = 'none';
-
   
+
+  questaoNumero.innerText = '10';
+  alternativaUm.innerText = 'preta c/ listras brancas'
+  alternativaDois.innerText = 'bracas c/ listreas pretas'
+  alternativaUm.style.paddingBottom = '20%'
+  alternativaDois.style.paddingBottom = '20%'
+
+  alternativaTres.style.display = 'none';
+  alternativaQuatro.style.display = 'none';
+  questaoTitulo.innerText = 'a zebra é branca com listras pretas ou treta com listras brancas';
+  palitoId.style.display = 'none';
+
+  alternativaDois.onclick = perdeu;
+  alternativaUm.onclick = questao11;
   
+
+  palitoId.style.backgroundRepeat = 'noRepeat';
+  palitoId.style.left = '50%';
+  palitoId.style.border = '1px solid black';
+  palitoId.style.borderRadius = '20px';
+
+}
+
+function questao11()
+{
 
 }
 

@@ -147,7 +147,7 @@ body {
 .alternativa:hover {
     background-color: rgba(0, 255, 213, 0.493);
     ;
-    transition: 2.0s;
+    transition: all 2.0s;
 }
 
 .animaçãoQ2esquerda {

@@ -626,6 +626,7 @@ function questao10()
   questaoNumero.innerText = '10';
   alternativaUm.innerText = 'preta c/ listras brancas'
   alternativaDois.innerText = 'bracas c/ listreas pretas'
+  questaoTitulo.innerText = 'a zebra é branca com listras pretas ou preta com listras brancas?';
 
   //aumenta o tamanho das divs
   alternativaUm.style.paddingBottom = '20%'
@@ -634,7 +635,7 @@ function questao10()
   //desaparece com as duas ultimas alternativas
   alternativaTres.style.display = 'none';
   alternativaQuatro.style.display = 'none';
-  questaoTitulo.innerText = 'a zebra é branca com listras pretas ou preta com listras brancas?';
+ 
   palitoId.style.display = 'none';
 
   //faz o acertou e perdeu
@@ -645,7 +646,28 @@ function questao10()
 
 function questao11()
 {
+  cont = 6;
 
+  const questao10 = document.getElementById("questaoLayout1");
+  const questao11 = document.getElementById("questaoLayout6");
+  const alternativaUm = document.getElementById("quadrado11");
+  const alternativaDois = document.getElementById("quadrado12");
+  const alternativaTres = document.getElementById("quadrado13");
+  const alternativaQuatro = document.getElementById("quadrado14");
+  const questaoNumero = document.getElementById("numeroIdSeis");
+  const questaoTitulo = document.getElementById("tituloIdSeis");
+  const video = document.getElementById("video");
+
+  questao10.style.display = 'none';
+  questao11.style.display = 'block';
+
+  questaoTitulo.innerText = 'qual semente o passaro vai pegar? ';
+  video.innerText = 'Video ';
+  questaoNumero.innerText = '11';
+  alternativaUm.innerText = 'semente branca';
+  alternativaDois.innerText = 'semente preta';
+  alternativaTres.innerText = 'semente amarela';
+  alternativaQuatro.innerText = 'nenhuma';
 }
 
 //O FINAL

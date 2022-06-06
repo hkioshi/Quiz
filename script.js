@@ -5,6 +5,7 @@
 let cont = 0;
 let contadorDeErrou = 0;
 let aberto = 1;
+let contMuv = 1;
 
 //funçao que vai abrir e fechar o botao segredo
 function abrirCodigo()
@@ -145,9 +146,7 @@ function triste()
   // aqui vai verificar qual questao voce esta, por isso o uso do contador
   const questao = document.getElementById("questaoLayout" + cont);
   
-  //faz a questao desaparecer
-  questao.style.display = "none";
-  aparecerPerdeu.style.display = "block";
+  
 
   // area de correçoes
   const aparecerPerdeu = document.getElementById("perdeu");
@@ -168,6 +167,10 @@ function triste()
   palitoId.style.left = '52,7%%';
   palitoId.style.border = '';
   truque.innerText = '2022';
+
+  //faz a questao desaparecer
+  questao.style.display = "none";
+  aparecerPerdeu.style.display = "block";
 } 
 
 function recomecar() {
@@ -407,7 +410,7 @@ function questao6() {
   //titulo e nº da questao
   questaoNumero.innerText = '6';
   questaoNumero.style.cursor = 'defalt';
-  questaoTitulo.innerText = 'qual é foi o ano de lançamento do primeiro genio quiz';
+  questaoTitulo.innerText = 'qual foi o ano de lançamento do primeiro genio quiz';
 
 
   // faz tudo aparecer na tela
@@ -481,7 +484,7 @@ function questao8() {
   //texto da pergunta
   questaoNumero.innerText = '8';
   questaoNumero.style.cursor = 'defalt';
-  questaoTitulo.innerText = 'Que bom, entao iremos te dar uma questao facil';
+  questaoTitulo.innerText = 'Que bom, então iremos te dar uma questão fácil';
 
   //faz a questao anterior sumir e a atual aparecer
   questao7.style.display = 'none';
@@ -666,7 +669,7 @@ function questao11()
   questao11.style.display = 'block';
 
   questaoTitulo.innerText = 'qual semente o passaro vai pegar? ';
-  video.innerText = 'Video ';
+  
   questaoNumero.innerText = '11';
   alternativaUm.innerText = 'branca';
   alternativaDois.innerText = 'amarela';
@@ -677,15 +680,62 @@ function questao11()
 
   //faz o acertou e errou
   alternativaUm.onclick = perdeu;
-  alternativaDois.onclick = questao12;
-  alternativaTres.onclick = perdeu;
+  alternativaDois.onclick = perdeu;
+  alternativaTres.onclick = questao12;
   alternativaQuatro.onclick = perdeu;
 
 }
 
 function questao12()
 {
+  cont = 7;
 
+  const questao11 = document.getElementById("questaoLayout6");
+  const questao12 = document.getElementById("questaoLayout7");
+  const alternativaUm = document.getElementById("quadrado17");
+  const questaoNumero = document.getElementById("numeroIdSete");
+  const questaoTitulo = document.getElementById("tituloIdSete");
+
+  questaoTitulo.innerText = 'Ufa, chegamos na ultima pergunta, clique pra acabar, prometemos que não irá ter nenhum botao escondido ';
+  questaoNumero.innerText = '12';
+  alternativaUm.innerText = 'FIM';
+
+  questao11.style.display = 'none';
+  questao12.style.display = 'block';
+ 
+  alternativaUm.onclick = final;
+
+}
+
+function trocaDePosicao()
+{
+  const alternativaUm = document.getElementById("quadrado17");
+  
+
+  switch(contMuv)
+  {
+    case 1:
+    alternativaUm.style.left = '90%';
+    //alternativaUm.style.top = '20%';
+    break;
+
+    case 2:
+    alternativaUm.style.left = '0';
+    //alternativaUm.style.top = '70%';
+    break;
+
+    case 3:
+    alternativaUm.style.left = '75%';
+    //alternativaUm.style.top = '0';
+    break;
+
+    case 4:
+    alternativaUm.style.left = '25%';
+    //alternativaUm.style.top = '20%';
+    break;
+  }
+  
+  contMuv++;
 }
 
 function mostrarVideo()

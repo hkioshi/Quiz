@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
     box-sizing: border-box;
@@ -245,6 +246,14 @@ body {
     display: none;
 }
 
+#quadrado17
+{
+    position: absolute;
+    left: 25%;
+    transition: all 0.02s;
+}
+
+
 #questaoLayout1 
 {
     display: none;
@@ -271,6 +280,11 @@ body {
 }
 
 #questaoLayout6
+{
+    display: none;
+}
+
+#questaoLayout7
 {
     display: none;
 }
@@ -378,6 +392,7 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
+    font-family: 'Pacifico', cursive;
 
 }
 

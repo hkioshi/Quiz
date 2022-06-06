@@ -27,6 +27,7 @@ function abrirCodigo()
 //esta função vai verificar a senha e abrir a tela de easter egg
 function verificarSenha()
 {
+  const desaparecerTitulo = document.getElementById("telaInicial");
   const codigo = document.getElementById("senha");
   let codigoTxt = codigo.value;
 
@@ -34,9 +35,18 @@ function verificarSenha()
   {
     const select = document.getElementById("select");
     select.style.display = 'block';
+    desaparecerTitulo.style.display = 'none';
+
   }
 }
 
+function inicio()
+{
+  const desaparecerTitulo = document.getElementById("telaInicial");
+  const codigo = document.getElementById("senha");
+  select.style.display = 'none';
+    desaparecerTitulo.style.display = 'block';
+}
 
 
 function jogar() {

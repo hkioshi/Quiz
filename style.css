@@ -296,7 +296,22 @@ body {
 
 #select
 {
+
     display: none;
+    position:absolute;
+
+    line-height:3;
+    font-family:'Indie Flower', cursive;
+    font-size:5vw;
+}
+
+
+
+#easterEgg
+{
+    width: 10%;
+    position:relative;
+     left:40% ;
 }
 
 #perdeu 

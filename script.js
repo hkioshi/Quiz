@@ -206,6 +206,9 @@ function questao2() {
   alternativaDois.onmouseleave = resetAnimação;
   alternativaUm.onmouseleave = resetAnimação;
 
+  alternativaUm.style.display = 'block';
+  alternativaDois.style.display = 'block';
+
   //aqui vai fazer o acertou errou
   alternativaDois.onclick = perdeu;
   alternativaUm.onclick = questao3;
@@ -650,12 +653,13 @@ function questao11()
 
   const questao10 = document.getElementById("questaoLayout1");
   const questao11 = document.getElementById("questaoLayout6");
-  const alternativaUm = document.getElementById("quadrado11");
-  const alternativaDois = document.getElementById("quadrado12");
-  const alternativaTres = document.getElementById("quadrado13");
-  const alternativaQuatro = document.getElementById("quadrado14");
+  const alternativaUm = document.getElementById("quadrado13");
+  const alternativaDois = document.getElementById("quadrado14");
+  const alternativaTres = document.getElementById("quadrado15");
+  const alternativaQuatro = document.getElementById("quadrado16");
   const questaoNumero = document.getElementById("numeroIdSeis");
   const questaoTitulo = document.getElementById("tituloIdSeis");
+  const palito = document.getElementById("palito2");
   const video = document.getElementById("video");
 
   questao10.style.display = 'none';
@@ -664,10 +668,42 @@ function questao11()
   questaoTitulo.innerText = 'qual semente o passaro vai pegar? ';
   video.innerText = 'Video ';
   questaoNumero.innerText = '11';
-  alternativaUm.innerText = 'semente branca';
-  alternativaDois.innerText = 'semente preta';
-  alternativaTres.innerText = 'semente amarela';
+  alternativaUm.innerText = 'branca';
+  alternativaDois.innerText = 'amarela';
+  alternativaTres.innerText = 'preta';
   alternativaQuatro.innerText = 'nenhuma';
+  palito.innerText = 'Video';
+  palito.onclick = mostrarVideo;
+
+  //faz o acertou e errou
+  alternativaUm.onclick = perdeu;
+  alternativaDois.onclick = questao12;
+  alternativaTres.onclick = perdeu;
+  alternativaQuatro.onclick = perdeu;
+
+}
+
+function questao12()
+{
+
+}
+
+function mostrarVideo()
+{
+  const questao11 = document.getElementById("questaoLayout6");
+  const video = document.getElementById("divideo");
+
+  questao11.style.display = 'none';
+  video.style.display = 'block';
+}
+
+function voltar()
+{
+  const questao11 = document.getElementById("questaoLayout6");
+  const video = document.getElementById("divideo");
+
+  questao11.style.display = 'block';
+  video.style.display = 'none';
 }
 
 //O FINAL
@@ -709,3 +745,11 @@ function resetAnimação() {
   const VoltaMexerDireita = document.getElementById('quadrado6');
   VoltaMexerDireita.className = 'alternativa';
 }
+
+function playPause() { 
+  var myVideo = document.getElementById("vconfig"); 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 

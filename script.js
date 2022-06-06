@@ -1,10 +1,9 @@
 //Esse variavel serve como contador, ele vai contar que fase voce esta
-let cont = 0 ;
+let cont = 0;
 let contadorDeErrou = 0;
 
 
-function jogar()
-{
+function jogar() {
   // Essa função é para inicar o quiz, ele vai fazer as tags de titulo
   // e o botao jogar desaparecerem e a primeira questao aparecer
 
@@ -16,18 +15,16 @@ function jogar()
 
 }
 
-function aparece()
-{
+function aparece() {
   //aqui é um botão para fazer o titulo aparecer
   const desaparecerTitulo = document.getElementById("telaInicial");
   desaparecerTitulo.style.display = "block";
 }
 
-function questaoUm()
-{
+function questaoUm() {
   // Indicando qual layout esta
   cont = 1;
-  
+
   //encontra as divs por meio das ids
   const questao = document.getElementById("questaoLayout1");
   const questaoNumero = document.getElementById("numeroIdUm");
@@ -36,7 +33,7 @@ function questaoUm()
   const alternativaDois = document.getElementById("quadrado2");
   const alternativaTres = document.getElementById("quadrado3");
   const alternativaQuatro = document.getElementById("quadrado4");
-  
+
 
   //coloca texto nas divs das alternativas
   alternativaUm.innerText = '2';
@@ -48,26 +45,25 @@ function questaoUm()
   alternativaDois.onclick = perdeu;
   alternativaTres.onclick = perdeu;
   alternativaQuatro.onclick = perdeu;
-  
-  
+
+
 
   //titulo e nº da questao/resposta da questão
   questaoNumero.innerText = '1';
   questaoNumero.style.cursor = 'pointer';
   questaoTitulo.innerText = 'Quantos palitos tem aqui?';
   questaoNumero.onclick = questaoDois;
-  
+
   // faz tudo aparecer na tela
   questao.style.display = "block";
 }
 
 // se responder errado ativa essa funçao
-function perdeu()
-{
-  
+function perdeu() {
+
   // aqui vai verificar qual questao voce esta, por isso o uso do contador
-  const  questao = document.getElementById("questaoLayout" + cont);
-  const  aparecerPerdeu = document.getElementById("perdeu");
+  const questao = document.getElementById("questaoLayout" + cont);
+  const aparecerPerdeu = document.getElementById("perdeu");
   const recomecar = document.getElementById("recomecar");
   const truque = document.getElementById("truque");
   //faz a questao desaparecer
@@ -80,7 +76,7 @@ function perdeu()
   palitoId.style.height = '0';
   palitoId.style.display = 'block';
   palitoId.style.backgroundColor = 'black';
-  palitoId.style.backgroundImage = ''; 
+  palitoId.style.backgroundImage = '';
   palitoId.style.left = '52,7%%';
 
   truque.innerText = '2022';
@@ -96,24 +92,22 @@ function perdeu()
     background-repeat: no-repeat;*/
 }
 
-function recomecar()
-{
+function recomecar() {
   cont = 0;
-  const  desaparecerPerdeu = document.getElementById("perdeu");
+  const desaparecerPerdeu = document.getElementById("perdeu");
   const desaparecerTitulo = document.getElementById("telaInicial");
   desaparecerPerdeu.style.display = "none";
   desaparecerTitulo.style.display = "block";
   contadorDeErrou++;
 }
 
-function questaoDois()
-{
+function questaoDois() {
   // Indicando qual layout esta
   cont = 2;
 
 
-  const  questaoUm = document.getElementById("questaoLayout1");
-  const  questaoDois = document.getElementById("questaoLayout2");
+  const questaoUm = document.getElementById("questaoLayout1");
+  const questaoDois = document.getElementById("questaoLayout2");
   const questaoNumero = document.getElementById("numeroIdDois");
   const questaoTitulo = document.getElementById("tituloIdDois");
   const alternativaUm = document.getElementById("quadrado5");
@@ -128,19 +122,22 @@ function questaoDois()
   questaoTitulo.innerText = 'Lado direito ao contrario, invertido e virado 180°';
   alternativaUm.innerText = '<--';
   alternativaDois.innerText = '-->';
+  //animação de volta mas a volta quando sai mouse
+  alternativaDois.onmouseleave = resetAnimação;
+  alternativaUm.onmouseleave = resetAnimação;
+
   alternativaDois.onclick = perdeu;
   alternativaUm.onclick = questaoTres;
 
+
   alternativaUm.style.display = 'block';
   alternativaDois.style.display = 'block';
-  
-  
+
 
 }
 
-function questaoTres()
-{
-cont = 1;
+function questaoTres() {
+  cont = 1;
 
   const questaoDois = document.getElementById("questaoLayout2");
   const questaoTres = document.getElementById("questaoLayout1");
@@ -156,8 +153,14 @@ cont = 1;
   palitoId.style.display = 'none';
   questaoNumero.onclick = '';
 
-  questaoNumero.innerText = '-3';
-  questaoTitulo.innerText = '+ 9 x 20 = ?';
+  questaoNumero.innerText = '3';
+  //
+  const numero3 = document.createElement('div')
+  numero3.id = 'numero3';
+  numero3.innerText = '-3 +';
+  document.body.appendChild(numero3);
+  //
+  questaoTitulo.innerText = ' 9 x 20 = ?';
 
   alternativaUm.innerText = '180';
   alternativaDois.innerText = '177';
@@ -168,13 +171,13 @@ cont = 1;
   alternativaDois.onclick = questaoQuatro;
   alternativaTres.onclick = perdeu;
   alternativaQuatro.onclick = perdeu;
-  
+
 
 }
 
-function questaoQuatro()
-{
-cont = 1;
+
+function questaoQuatro() {
+  cont = 1;
 
   const questaoTres = document.getElementById("questaoLayout1");
   const questaoNumero = document.getElementById("numeroIdUm");
@@ -189,12 +192,12 @@ cont = 1;
   palitoId.style.height = '10%';
   palitoId.style.display = 'block';
   palitoId.style.backgroundColor = 'rgb(223, 254, 241)';
-  palitoId.style.backgroundImage = 'url(imagens/jupter.png)'; 
+  palitoId.style.backgroundImage = 'url(imagens/jupter.png)';
   palitoId.style.backgroundSize = '60%';
-  
+
   palitoId.style.backgroundRepeat = 'noRepeat';
   palitoId.style.left = '52.7%';
-  
+
 
   questaoNumero.onclick = '';
   questaoNumero.style.cursor = 'defalt';
@@ -211,12 +214,11 @@ cont = 1;
   alternativaDois.onclick = perdeu;
   alternativaTres.onclick = perdeu;
   alternativaQuatro.onclick = questaoCinco;
-  
+
 
 }
 
-function questaoCinco()
-{
+function questaoCinco() {
   cont = 2;
   const questao4 = document.getElementById("questaoLayout1");
   const questao5 = document.getElementById("questaoLayout2");
@@ -228,7 +230,7 @@ function questaoCinco()
   const botaoCerto = document.createElement('div');
   botaoCerto.id = 'botaoCertoId';
   document.body.appendChild(botaoCerto);
-  const botaoErrado =  document.createElement('div');
+  const botaoErrado = document.createElement('div');
   botaoErrado.id = 'botaoErradoId';
   document.body.appendChild(botaoErrado);
 
@@ -247,18 +249,17 @@ function questaoCinco()
 
   questaoNumero.innerText = '5';
   questaoTitulo.innerText = 'Encontre o botao escondido';
-  
+
 
 }
 
-function questaoSeis()
-{
-  
+function questaoSeis() {
+
 
 
   // Indicando qual layout esta
   cont = 1;
-  
+
   //encontra as divs por meio das ids
   const questao6 = document.getElementById("questaoLayout1");
   const questao5 = document.getElementById("questaoLayout2");
@@ -272,7 +273,7 @@ function questaoSeis()
   const alternativaQuatro = document.getElementById("quadrado4");
   const palitoId = document.getElementById('palito');
   const truque = document.getElementById("truque");
-  
+
 
   //apagando a questao anterior
 
@@ -283,7 +284,7 @@ function questaoSeis()
 
 
   truque.innerText = '2010';
-  truque.onclick = questao7 ;
+  truque.onclick = questao7;
 
   //coloca texto nas divs das alternativas
   alternativaUm.innerText = '2012';
@@ -295,22 +296,21 @@ function questaoSeis()
   alternativaDois.onclick = perdeu;
   alternativaTres.onclick = perdeu;
   alternativaQuatro.onclick = perdeu;
-  
-  
+
+
 
   //titulo e nº da questao/resposta da questão
   questaoNumero.innerText = '6';
   questaoNumero.style.cursor = 'defalt';
   questaoTitulo.innerText = 'qual é foi o ano de lançamento do primeiro genio quiz';
-  
-  
+
+
   // faz tudo aparecer na tela
   questao6.style.display = "block";
 }
 
-function questao7()
-{
-  cont  = 3;
+function questao7() {
+  cont = 3;
   const questao6 = document.getElementById("questaoLayout1");
   const questao7 = document.getElementById("questaoLayout3");
   const alternativaUm = document.getElementById("quadrado7");
@@ -323,7 +323,7 @@ function questao7()
 
   truque.innerText = '2022'
   truque.onclick = '';
-  questaoNumero 
+  questaoNumero
 
   questaoNumero.innerText = '7';
   questaoNumero.style.cursor = 'defalt';
@@ -336,30 +336,28 @@ function questao7()
   alternativaDois.onclick = perdeu;
   alternativaTres.onclick = perdeu;
 
-  
+
   questaoNumero.style.cursor = 'pointer';
- 
+
   questaoNumero.onmouseenter = socorro;
   questaoNumero.onclick = questao8;
-  
-  
+
+
 
   questao6.style.display = 'none';
   questao7.style.display = "block";
-  
+
 
 
 }
 
-function socorro()
-{
+function socorro() {
   const questaoNumero = document.getElementById("numeroIdTres");
   questaoNumero.innerText = 'Sim';
   questaoNumero.className = 'animacaoNumeroIdTres';
 }
 
-function questao8()
-{
+function questao8() {
   cont = 5;
 
   const questao7 = document.getElementById("questaoLayout3");
@@ -379,7 +377,7 @@ function questao8()
   questao8.style.display = "block";
   alternativaUm.innerText = 'alternativa certa';
   alternativaUm.style.paddingBottom = '20%';
-  
+
   const alternativaDois = document.createElement("div");
   alternativaDois.id = 'quadrado11'
   alternativaDois.className = 'alternativa';
@@ -395,8 +393,7 @@ function questao8()
   alternativaUm.onclick = q2;
 }
 
-function q2()
-{
+function q2() {
   const alternativaUm = document.getElementById("quadrado10");
   const alternativaDois = document.getElementById("quadrado11");
   const alternativaTres = document.getElementById("quadrado12");
@@ -407,8 +404,7 @@ function q2()
 
 }
 
-function q3()
-{
+function q3() {
   const alternativaUm = document.getElementById("quadrado10");
   const alternativaDois = document.getElementById("quadrado11");
   const alternativaTres = document.getElementById("quadrado12");
@@ -421,8 +417,7 @@ function q3()
   truque.onclick = questao9;
 }
 
-function q1()
-{
+function q1() {
   const alternativaUm = document.getElementById("quadrado10");
   const alternativaDois = document.getElementById("quadrado11");
   const alternativaTres = document.getElementById("quadrado12");
@@ -433,20 +428,17 @@ function q1()
 
 }
 
-function questao9()
-{
-  
+function questao9() {
+
 }
 
 
-function animarBotaoJogar() 
-{
+function animarBotaoJogar() {
   const jogar = document.getElementById('jogar');
   jogar.className = 'jogarAnimacao';
 }
 
-function animarBotaoSegredo() 
-{
+function animarBotaoSegredo() {
   const jogar = document.getElementById('segredo');
   jogar.className = 'segredoAnimação';
 }
@@ -458,14 +450,20 @@ function animarBotao2Questao2() {
   const mexerDireita = document.getElementById('quadrado6');
   mexerDireita.className = 'animaçãoQ2direita';
 }
-function final()
-{
+function final() {
   const finalDiv = document.getElementById('fim');
   const vezesPerdeu = document.getElementById('perdeuQuantas');
-  
+
   finalDiv.style.display = 'block';
   vezesPerdeu.innerText = ('voce perdeu ' + contadorDeErrou + ' vezes');
 
-  
- 
+
+
+}
+function resetAnimação() {
+  const VoltaMexerEsquerda = document.getElementById('quadrado5');
+  VoltaMexerEsquerda.className = 'alternativa';
+
+  const VoltaMexerDireita = document.getElementById('quadrado6');
+  VoltaMexerDireita.className = 'alternativa';
 }

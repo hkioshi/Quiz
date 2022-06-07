@@ -263,13 +263,13 @@ function questao3() {
 
   //TEXTO DA PERGUNTA 3
   questaoNumero.innerText = '-3';
-  // num aceito nao colocar o -3, vai ter MINUS TRES SIM!
+  // num aceito Não colocar o -3, vai ter MINUS TRES SIM!
   const numero3 = document.createElement('div')
   questaoTitulo.innerText = ' + 9 x 20 = ?';
   alternativaUm.innerText = '180';
   alternativaDois.innerText = '177';
   alternativaTres.innerText = '60';
-  alternativaQuatro.innerText = '29';
+  alternativaQuatro.innerText = '120';
 
   /*
   coisas do caio (num mexa)
@@ -354,7 +354,7 @@ function questao5() {
   numeroSecreto.innerText = '5';
 
 
-  //butoes secretos(kkkk, muita gente não vai passar daqui)
+  //butoes secretos(kkkk, muita gente Não vai passar daqui)
   const botaoCerto = document.createElement('div');
   botaoCerto.id = 'botaoCertoId';
   document.body.appendChild(botaoCerto);
@@ -363,17 +363,17 @@ function questao5() {
   document.body.appendChild(botaoErrado);
 
   //config do botao errado e do botão certo
-  const botaonao = document.getElementById("botaoErradoId");
+  const botaoNão = document.getElementById("botaoErradoId");
   const botaosim = document.getElementById("botaoCertoId");
-  botaonao.innerText = 'esse é o errado';
-  botaonao.onclick = perdeu;
+  botaoNão.innerText = 'esse é o errado';
+  botaoNão.onclick = perdeu;
   botaosim.onclick = questao6;
 
  //apagando a questao anterior
   questao4.style.display = 'none';
   questao5.style.display = 'block';
 
-   //faz as divs de alternativa sumirem(aqui nao precisamos delas)
+   //faz as divs de alternativa sumirem(aqui Não precisamos delas)
   alternativaUm.style.display = 'none';
   alternativaDois.style.display = 'none';
 
@@ -394,7 +394,7 @@ function questao6() {
   //encontra as divs por meio das ids
   const questao6 = document.getElementById("questaoLayout1");
   const questao5 = document.getElementById("questaoLayout2");
-  const botaonao = document.getElementById("botaoErradoId");
+  const botaoNão = document.getElementById("botaoErradoId");
   const botaosim = document.getElementById("botaoCertoId");
   const questaoNumero = document.getElementById("numeroIdUm");
   const questaoTitulo = document.getElementById("tituloIdUm");
@@ -411,11 +411,11 @@ function questao6() {
   //apagando a questao anterior
 
   questao5.style.display = 'none';
-  document.body.removeChild(botaonao);
+  document.body.removeChild(botaoNão);
   document.body.removeChild(botaosim);
   palitoId.style.display = 'none';
 
-  // aqui é o tuque, não se esqueça(resposta da questão)
+  // aqui é o tuque, Não se esqueça(resposta da questão)
   truque.innerText = '2010';
   truque.onclick = questao7;
 
@@ -436,7 +436,7 @@ function questao6() {
   //titulo e nº da questao
   questaoNumero.innerText = '6';
   questaoNumero.style.cursor = 'defalt';
-  questaoTitulo.innerText = 'Qual foi o ano de lançamento do primeiro gênio quiz';
+  questaoTitulo.innerText = 'Qual foi o ano de lançamento do primeiro genio quiz';
 
 
   // faz tudo aparecer na tela
@@ -472,7 +472,7 @@ function questao7() {
   alternativaDois.innerText = 'Não';
   alternativaTres.innerText = 'Não';
 
-  //nao é a resposta da questao
+  //Não é a resposta da questao
   alternativaUm.onclick = triste;
   alternativaDois.onclick = triste;
   alternativaTres.onclick = triste;
@@ -592,7 +592,7 @@ function questao9()
   //encontra as divs por meio das ids
   const questao8 = document.getElementById("questaoLayout5");
   const questao9 = document.getElementById("questaoLayout1");
-  const botaonao = document.getElementById("botaoErradoId");
+  const botaoNão = document.getElementById("botaoErradoId");
   const botaosim = document.getElementById("botaoCertoId");
   const questaoNumero = document.getElementById("numeroIdUm");
   const questaoTitulo = document.getElementById("tituloIdUm");
@@ -648,7 +648,7 @@ function questao10()
 
   //encontra as divs por meio das ids
   const questao9 = document.getElementById("questaoLayout1");
-  const botaonao = document.getElementById("botaoErradoId");
+  const botaoNão = document.getElementById("botaoErradoId");
   const botaosim = document.getElementById("botaoCertoId");
   const questaoNumero = document.getElementById("numeroIdUm");
   const questaoTitulo = document.getElementById("tituloIdUm");
@@ -664,8 +664,8 @@ function questao10()
 
   //coloca os textos da questao
   questaoNumero.innerText = '10';
-  alternativaUm.innerText = 'preta c/ listras brancas'
-  alternativaDois.innerText = 'bracas c/ listreas pretas'
+  alternativaUm.innerText = 'Preta c/ listras brancas'
+  alternativaDois.innerText = 'Brancas c/ listreas pretas'
   questaoTitulo.innerText = 'a zebra é branca com listras pretas ou preta com listras brancas?';
 
   //aumenta o tamanho das divs
@@ -734,7 +734,7 @@ function questao12()
   const numeroSecreto = document.getElementById("numeroSecreto");
   numeroSecreto.innerText = '2';
 
-  questaoTitulo.innerText = 'Ufa, chegamos na ultima pergunta, clique pra acabar, prometemos que não irá ter nenhum botao escondido ';
+  questaoTitulo.innerText = 'Ufa, chegamos na ultima pergunta, clique pra acabar, prometemos que Não irá ter nenhum botao escondido ';
   questaoNumero.innerText = '12';
   alternativaUm.innerText = 'FIM';
 

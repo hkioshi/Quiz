@@ -145,7 +145,7 @@ function perdeu() {
   // solta o famoso perdeu do faustao quando voce erra
   const music = new Audio('faustao-errou.mp3');
   music.play();
-
+  contadorDeErrou++;
   //brincadeira da pergunta 7
   let verificacao = tituloPerdeu.value;
 
@@ -197,7 +197,7 @@ function recomecar() {
   desaparecerTitulo.style.display = "block";
 
   // aqui vai contar quantos erros o jogador teve
-  contadorDeErrou++;
+  
 }
 
 function questao2() {

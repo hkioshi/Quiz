@@ -263,7 +263,7 @@ function questao3() {
 
   //TEXTO DA PERGUNTA 3
   questaoNumero.innerText = '-3';
-  // num aceito Não colocar o -3, vai ter MINUS TRES SIM!
+  
   const numero3 = document.createElement('div')
   questaoTitulo.innerText = ' + 9 x 20 = ?';
   alternativaUm.innerText = '180';
@@ -271,13 +271,6 @@ function questao3() {
   alternativaTres.innerText = '60';
   alternativaQuatro.innerText = '120';
 
-  /*
-  coisas do caio (num mexa)
-  numero3.id = 'numero3';
-  numero3.innerText = '-3 +';
-  document.body.appendChild(numero3);
-  */
-  
   //respota da QuEsTãO
   alternativaUm.onclick = perdeu;
   alternativaDois.onclick = questao4;
@@ -292,8 +285,6 @@ function questao4() {
   // Indicando qual layout esta
   cont = 1;
 
-  //coisa do caio(num mexa)
-  //document.body.removeChild(numero3);
 
   //encontra as divs por meio das ids
   const questaoTres = document.getElementById("questaoLayout1");
@@ -354,7 +345,7 @@ function questao5() {
   numeroSecreto.innerText = '5';
 
 
-  //butoes secretos(kkkk, muita gente Não vai passar daqui)
+  //butoes secretos
   const botaoCerto = document.createElement('div');
   botaoCerto.id = 'botaoCertoId';
   document.body.appendChild(botaoCerto);
@@ -369,11 +360,11 @@ function questao5() {
   botaoNão.onclick = perdeu;
   botaosim.onclick = questao6;
 
- //apagando a questao anterior
+  //apagando a questao anterior
   questao4.style.display = 'none';
   questao5.style.display = 'block';
 
-   //faz as divs de alternativa sumirem(aqui Não precisamos delas)
+  //faz as divs de alternativa sumirem(aqui Não precisamos delas)
   alternativaUm.style.display = 'none';
   alternativaDois.style.display = 'none';
 
@@ -415,7 +406,7 @@ function questao6() {
   document.body.removeChild(botaosim);
   palitoId.style.display = 'none';
 
-  // aqui é o tuque, Não se esqueça(resposta da questão)
+  //resposta da questão
   truque.innerText = '2010';
   truque.onclick = questao7;
 
@@ -607,7 +598,7 @@ function questao9()
   const numeroSecreto = document.getElementById("numeroSecreto");
   numeroSecreto.innerText = '9';
 
-  //AQ É HONESTO, NUM TEM TRUQUE NENHUM, CONFIA
+  //volta o ano pra 2022
   truque.innerText = "2022"
   truque.onclick = '';
 
@@ -688,6 +679,7 @@ function questao11()
 {
   cont = 6;
 
+  //encontra as divs por meio das ids
   const questao10 = document.getElementById("questaoLayout1");
   const questao11 = document.getElementById("questaoLayout6");
   const alternativaUm = document.getElementById("quadrado13");
@@ -701,11 +693,12 @@ function questao11()
   const numeroSecreto = document.getElementById("numeroSecreto");
   numeroSecreto.innerText = '1';
 
+  //faz a questao anterior sumir e a atual aparecer
   questao10.style.display = 'none';
   questao11.style.display = 'block';
 
+  //coloca os textos da questao
   questaoTitulo.innerText = 'qual semente o passaro vai pegar? ';
-  
   questaoNumero.innerText = '11';
   alternativaUm.innerText = 'branca';
   alternativaDois.innerText = 'amarela';
@@ -726,6 +719,7 @@ function questao12()
 {
   cont = 7;
 
+  //encontra as divs por meio das ids
   const questao11 = document.getElementById("questaoLayout6");
   const questao12 = document.getElementById("questaoLayout7");
   const alternativaUm = document.getElementById("quadrado17");
@@ -734,10 +728,12 @@ function questao12()
   const numeroSecreto = document.getElementById("numeroSecreto");
   numeroSecreto.innerText = '2';
 
+  //coloca os textos da questao
   questaoTitulo.innerText = 'Ufa, chegamos na ultima pergunta, clique pra acabar, prometemos que Não irá ter nenhum botao escondido ';
   questaoNumero.innerText = '12';
   alternativaUm.innerText = 'FIM';
 
+  //faz a questao anterior sumir e a atual aparecer
   questao11.style.display = 'none';
   questao12.style.display = 'block';
  
@@ -776,37 +772,57 @@ function trocaDePosicao()
   contMuv++;
 }
 
+
+//tela do video
 function mostrarVideo()
 {
+  //encontra as divs por meio das ids
   const questao11 = document.getElementById("questaoLayout6");
   const video = document.getElementById("divideo");
 
+  //faz o video aparecer e a questao desapartecer
   questao11.style.display = 'none';
   video.style.display = 'block';
 }
 
 function voltar()
 {
+  //encontra as divs por meio das ids
   const questao11 = document.getElementById("questaoLayout6");
   const video = document.getElementById("divideo");
 
+  //faz o video desaparecer e a questao aparecer
   questao11.style.display = 'block';
   video.style.display = 'none';
 }
 
 //O FINAL
-function final() { 
+function final() 
+{ 
+  //faz o video aparecer e a questao desapartecer
   const questao12 = document.getElementById('questaoLayout7')
   const finalDiv = document.getElementById('fim');
   const vezesPerdeu = document.getElementById('perdeuQuantas');
   const numeroSecreto = document.getElementById("numeroSecreto");
   numeroSecreto.style.display = 'none';
 
+  //faz a questao anterior sumir e a atual aparecer
   questao12.style.display = 'none';
   finalDiv.style.display = 'block';
+
   // quantas vezes voce perdeu?
   vezesPerdeu.innerText = ('voce perdeu ' + contadorDeErrou + ' vezes');
 }
+
+//faz o video pausar/iniciar
+function playPause() { 
+  var myVideo = document.getElementById("vconfig"); 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
 
 // area das animaçoes do caio(num mexa)
 
@@ -838,10 +854,3 @@ function resetAnimação() {
   VoltaMexerDireita.className = 'alternativa';
 }
 
-function playPause() { 
-  var myVideo = document.getElementById("vconfig"); 
-  if (myVideo.paused) 
-    myVideo.play(); 
-  else 
-    myVideo.pause(); 
-} 

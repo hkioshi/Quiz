@@ -507,3 +507,10 @@ body {
     font-size:2vw;
     display: none;
 }
+
+#reiniciarJogo
+{
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 20px;
+}

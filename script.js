@@ -799,7 +799,7 @@ function voltar()
 //O FINAL
 function final() 
 { 
-  //faz o video aparecer e a questao desapartecer
+  //encontra as divs por meio das ids
   const questao12 = document.getElementById('questaoLayout7')
   const finalDiv = document.getElementById('fim');
   const vezesPerdeu = document.getElementById('perdeuQuantas');
